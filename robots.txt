@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://vuepress-theme-hope-docs-demo.netlify.app/pdfdeal-docs/sitemap.xml
+Sitemap: https://menghuan1918.github.io/pdfdeal-docs/pdfdeal-docs/sitemap.xml
