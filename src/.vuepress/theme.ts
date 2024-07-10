@@ -4,8 +4,7 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
-
+  hostname: "https://menghuan1918.github.io/pdfdeal-docs/",
   author: {
     name: "Menghuan1918",
     url: "https://github.com/Menghuan1918",
@@ -13,9 +12,9 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "/favicon.ico",
 
-  repo: "Menghuan1918/pdfdeal",
+  repo: "Menghuan1918/pdfdeal-docs",
 
   docsDir: "src",
 
@@ -46,13 +45,13 @@ export default hopeTheme({
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "默认页脚",
+      footer: "👋Hi",
 
       displayFooter: true,
 
       // page meta
       metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
+        editLink: "Edit in GitHub",
       },
     },
   },

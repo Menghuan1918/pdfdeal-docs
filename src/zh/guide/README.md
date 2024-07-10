@@ -1,16 +1,12 @@
 ---
-title: 指南
+title: 手册
 icon: lightbulb
 ---
 
-## 功能亮点
+## 使用指南
 
-### Bar
+### Doc2X支持
 
-- [baz](bar/baz.md)
-- ...
+你可以单独使用库中的Doc2X相关部分，除了请求的封装外，其还附带有RPM限制，批处理，自动处理异常的功能。
 
-### Foo
-
-- [ray](foo/ray.md)
-- ...
+[查看手册](Doc2X/README.md)
