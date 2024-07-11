@@ -1,6 +1,6 @@
 ---
 title: Doc2X支持
-icon: save
+icon: file-contract
 ---
 
 ![](../../../images/doc2x.png)
