@@ -4,7 +4,8 @@ export const enNavbar = navbar([
   "/",
   // "/portfolio",
   "/demo/",
-  "/guide/"
+  "/guide/",
+  "/changes/",
   // {
   //   text: "Guide",
   //   icon: "lightbulb",

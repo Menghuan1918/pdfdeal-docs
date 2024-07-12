@@ -1,0 +1,33 @@
+---
+title: Command Line Tools
+icon: code
+---
+
+## `doc2x` Command Usage Instructions
+
+The `doc2x` command is used for batch processing of PDF or image files, converting them into various output formats.
+
+### Positional Arguments
+
+| Parameter  | Description                          |
+|------------|--------------------------------------|
+| `filename` | The PDF or image file/folder to process |
+
+### Optional Arguments
+
+| Short Flag | Long Flag          | Description                                                                                         |
+|------------|--------------------|-----------------------------------------------------------------------------------------------------|
+| `-h`       | `--help`           | Show help information and exit                                                                       |
+| `-y`       |                    | Skip any scenarios requiring secondary user input                                                    |
+| `-k`       | `--api_key`        | Doc2X's API key; if not set, the global setting will be used                                         |
+| `-r`       | `--rpm`            | Doc2X's rate limit; do not set if unsure                                                             |
+| `-o`       | `--output`         | Output folder for results; if not set, it will default to './Output'                                 |
+| `-f`       | `--format`         | Output format for results; supports `md`, `md_dollar`, `latex`, and `docx`; defaults to `md_dollar`  |
+| `-i`       | `--image`          | If input is an image, set this flag to True; otherwise, the user will be prompted                    |
+| `-p`       | `--pdf`            | If input is a PDF, set this flag to True; otherwise, the user will be prompted                       |
+| `--equation`  |                  | Whether to use pure formula mode; only effective for images; defaults to False                      |
+| `-c`       | `--clear`          | Clear all global settings related to Doc2X                                                           |
+
+You can directly run the program by entering 'python -m doc2x', which will guide you through the remaining required parameters. Note that the output path will default to './Output', and the format will default to 'md_dollar'.
+
+![Some Examples](../../images/cli1.png)

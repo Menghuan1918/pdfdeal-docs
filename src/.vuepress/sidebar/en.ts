@@ -17,6 +17,11 @@ export const enSidebar = sidebar({
       prefix: "guide/",
       children: "structure",
     },
+    {
+      text: "Changelog",
+      icon: "wrench",
+      link: "changes/",
+    }
     // {
     //   text: "Slides",
     //   icon: "person-chalkboard",

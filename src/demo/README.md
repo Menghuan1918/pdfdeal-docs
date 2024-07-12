@@ -6,4 +6,6 @@ category:
   - Guide
 ---
 
-<Catalog />
+to be supplemented
+
+You can [view instructions for use here](../guide/README.md).
