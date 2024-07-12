@@ -8,7 +8,7 @@ bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: pdfdeal
-tagline: 您可以在这里放置或是整个项目的描述。
+tagline: 更轻松简单地处理 PDF，提取可读文本，用 OCR 识别图像文本并清理格式,使其更适合构建知识库。使用Doc2X以达到最佳效果。
 actions:
   - text: 使用指南
     icon: lightbulb
@@ -19,10 +19,15 @@ actions:
     link: ./guide/
 
 features:
-  - title: 链接检查
+  - title: 快速开始
     icon: clipboard-check
-    details: 检查 Markdown 链接
-    link: https://theme-hope.vuejs.press/zh/guide/markdown/others.html#link-check
+    details: 使用命令行工具`doc2x`快速批量使用Doc2X API转换PDF或图片
+    link: https://menghuan1918.github.io/pdfdeal-docs/zh/guide/CLI/
+    
+  - title: RAG增强
+    icon: tachometer-alt
+    details: 利用Doc2X增强RAG效果
+    link: https://menghuan1918.github.io/pdfdeal-docs/zh/guide/Doc2X/3.html
 
 # highlights:
 #   - header: 易于安装
