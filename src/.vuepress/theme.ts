@@ -68,10 +68,10 @@ export default hopeTheme({
     // You MUST generate and use your own comment service in production.
     comment: {
       provider: "Giscus",
-      repo: "Menghuan1918/pdfdeal",
-      repoId: "R_kgDOMBwkkg",
+      repo: "Menghuan1918/pdfdeal-docs",
+      repoId: "R_kgDOMUblpQ",
       category: "Announcements",
-      categoryId: "DIC_kwDOMBwkks4CggOK",
+      categoryId: "DIC_kwDOMUblpc4CgvRc",
     },
 
     components: {

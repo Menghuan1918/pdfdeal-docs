@@ -12,7 +12,7 @@ icon: key
 运行以下代码以导入你的API密匙：
 
 ```python
-from pdfdeal.doc2x import Doc2X
+from pdfdeal import Doc2X
 Client = Doc2X()
 ```
 
@@ -53,6 +53,16 @@ DOC2X_APIKEY = "Your API Key"
 如果你想指定你的API密匙，你可以通过以下代码导入：
 
 ```python
-from pdfdeal.doc2x import Doc2X
+from pdfdeal import Doc2X
 Client = Doc2X(apikey="Your API key")
+```
+
+## 自定义：RPM请求限制
+
+> [!caution]
+> 除非你确信你需要修改请求频率，请不要修改 `rpm`（每分钟请求数），请使用默认的设置。
+
+```python
+from pdfdeal import Doc2X
+Client = Doc2X(rpm=1)
 ```
