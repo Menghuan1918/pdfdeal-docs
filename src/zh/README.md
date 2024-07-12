@@ -12,11 +12,11 @@ tagline: 更轻松简单地处理 PDF，提取可读文本，用 OCR 识别图�
 actions:
   - text: 使用指南
     icon: lightbulb
-    link: ./demo/
+    link: ./guide/
     type: primary
 
-  - text: 文档
-    link: ./guide/
+  - text: 演示
+    link: ./demo/
 
 features:
   - title: 快速开始

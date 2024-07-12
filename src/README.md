@@ -2,22 +2,32 @@
 home: true
 icon: home
 title: Project home
-heroImage: https://theme-hope-assets.vuejs.press/logo.svg
+heroImage: /logo.svg
 bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: pdfdeal
-tagline: You can place the description of the project here.
+tagline: Easier and simpler to process PDF, extract readable text, recognize image text with OCR and clean up the formatting to make it more suitable for building knowledge bases. Use Doc2X for best results.
 actions:
-  - text: How to Use
+  - text: Docs
     icon: lightbulb
-    link: ./demo/
+    link: ./guide/
     type: primary
 
-  - text: Docs
-    link: ./guide/
+  - text: Demo
+    link: ./demo/
 
+features:
+  - title: Quick Start
+    icon: clipboard-check
+    details: Quickly batch convert PDFs or images using the Doc2X API with the command line tool `doc2x`.
+    link: https://menghuan1918.github.io/pdfdeal-docs/guide/CLI/
+    
+  - title: RAG Enhancements
+    icon: tachometer-alt
+    details: RAG enhancement with Doc2X
+    link: https://menghuan1918.github.io/pdfdeal-docs/guide/Doc2X/3.html
 # highlights:
 #   - header: Easy to install
 #     image: /assets/image/box.svg
