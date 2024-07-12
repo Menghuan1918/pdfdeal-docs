@@ -27,4 +27,6 @@ pdfdeal内置了一些方便的文件处理工具，例如快速解压zip文件�
 
 ### 对PDF文件进行处理
 
-待补充
+您还可以使用离线OCR对PDF进行处理。目前内建有`easyocr`以及`pytesseract`的支持，您也可以自定义OCR函数进行处理。注意离线OCR对表格以及公式场景表现很差。
+
+请查看[使用文档](pdfdeal/README.md)

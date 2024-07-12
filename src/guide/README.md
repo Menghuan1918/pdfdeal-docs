@@ -28,4 +28,6 @@ Please see [Documentation](Tools.md)
 
 ### Processing of PDF files
 
-To be added
+You can also use offline OCR to process PDF. Currently there is built-in support for `easyocr` and `pytesseract`, and you can also customize OCR functions for processing. Note that offline OCR performs poorly on table and formula scenarios.
+
+See [documentation](pdfdeal/README.md).
