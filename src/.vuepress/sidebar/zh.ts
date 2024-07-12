@@ -17,6 +17,11 @@ export const zhSidebar = sidebar({
       prefix: "guide/",
       children: "structure",
     },
+    {
+      text: "更新日志",
+      icon: "wrench",
+      link: "changes/",
+    },
     // {
     //   text: "幻灯片",
     //   icon: "person-chalkboard",

@@ -5,6 +5,7 @@ export const zhNavbar = navbar([
   // "/zh/portfolio",
   "/zh/demo/",
   "/zh/guide/",
+  "/zh/changes/",
   // {
   //   text: "指南",
   //   icon: "lightbulb",

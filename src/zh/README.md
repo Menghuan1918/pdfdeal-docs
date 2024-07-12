@@ -8,7 +8,7 @@ bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: pdfdeal
-tagline: 你可以在这里放置或是整个项目的描述。
+tagline: 您可以在这里放置或是整个项目的描述。
 actions:
   - text: 使用指南
     icon: lightbulb
@@ -33,8 +33,8 @@ features:
 #       - title: 运行 <code>pnpm create vuepress-theme-hope hope-project</code> 以创建一个新的主题项目。
 #       - title: 在已有项目根目录下运行 <code>pnpm create vuepress-theme-hope add .</code> 以在项目中添加主题。
 
-#   - header: 在 Markdown 中添加你想要的内容
-#     description: 我们扩展了标准的 CommonMark 规范，为你添加了成吨功能。
+#   - header: 在 Markdown 中添加您想要的内容
+#     description: 我们扩展了标准的 CommonMark 规范，为您添加了成吨功能。
 #     image: /assets/image/markdown.svg
 #     bgImage: https://theme-hope-assets.vuejs.press/bg/2-light.svg
 #     bgImageDark: https://theme-hope-assets.vuejs.press/bg/2-dark.svg
@@ -144,12 +144,12 @@ features:
 
 #       - title: 导入文件支持
 #         icon: fab fa-markdown
-#         details: 将你的文档分段，并在 Markdown 中导入
+#         details: 将您的文档分段，并在 Markdown 中导入
 #         link: https://theme-hope.vuejs.press/zh/guide/markdown/content/include.html
 
 #       - title: 交互演示支持
 #         icon: code
-#         details: 你可以在 Markdown 中添加交互演示
+#         details: 您可以在 Markdown 中添加交互演示
 #         link: https://theme-hope.vuejs.press/zh/guide/markdown/code/playground.html
 
 #       - title: Kotlin 交互演示支持
@@ -169,7 +169,7 @@ features:
 
 #       - title: 代码案例支持
 #         icon: laptop-code
-#         details: 你可以很方便的插入代码案例
+#         details: 您可以很方便的插入代码案例
 #         link: https://theme-hope.vuejs.press/zh/guide/markdown/code/demo.html
 
 #       - title: 幻灯片支持
@@ -216,7 +216,7 @@ features:
 
 #       - title: 幻灯片页面
 #         icon: person-chalkboard
-#         details: 添加幻灯片页面以显示你喜欢的内容
+#         details: 添加幻灯片页面以显示您喜欢的内容
 #         link: https://theme-hope.vuejs.press/zh/guide/layout/slides.html
 
 #       - title: 布局增强
@@ -246,12 +246,12 @@ features:
 
 #       - title: 文章信息
 #         icon: circle-info
-#         details: 为你的文章添加作者、写作日期、预计阅读时间、字数统计等信息
+#         details: 为您的文章添加作者、写作日期、预计阅读时间、字数统计等信息
 #         link: https://theme-hope.vuejs.press/zh/guide/feature/page-info.html
 
 #       - title: 文章加密
 #         icon: lock
-#         details: 你可以为你的特定页面或特定目录进行加密，以便陌生人不能随意访问它们
+#         details: 您可以为您的特定页面或特定目录进行加密，以便陌生人不能随意访问它们
 #         link: https://theme-hope.vuejs.press/zh/guide/feature/encrypt.html
 
 #       - title: 搜索支持
@@ -266,7 +266,7 @@ features:
 
 #       - title: 图片预览
 #         icon: image
-#         details: 像相册一样允许你浏览、缩放并分享你的页面图片
+#         details: 像相册一样允许您浏览、缩放并分享您的页面图片
 #         link: https://theme-hope.vuejs.press/zh/guide/feature/photo-swipe.html
 
 #   - header: 博客
@@ -308,25 +308,25 @@ features:
 
 #       - title: Sitemap
 #         icon: sitemap
-#         details: 自动为你的网站生成 Sitemap
+#         details: 自动为您的网站生成 Sitemap
 #         link: https://theme-hope.vuejs.press/zh/guide/advanced/sitemap.html
 
 #       - title: Feed 支持
 #         icon: rss
-#         details: 生成你的 Feed，并通知你的用户订阅它
+#         details: 生成您的 Feed，并通知您的用户订阅它
 #         link: https://theme-hope.vuejs.press/zh/guide/advanced/feed.html
 
 #       - title: PWA 支持
 #         icon: mobile-screen
-#         details: 让你的网站更像一个 APP
+#         details: 让您的网站更像一个 APP
 #         link: https://theme-hope.vuejs.press/zh/guide/advanced/pwa.html
 
 # copyright: false
 # footer: 使用 <a href="https://theme-hope.vuejs.press/zh/" target="_blank">VuePress Theme Hope</a> 主题 | MIT 协议, 版权所有 © 2019-至今 Mr.Hope
 # ---
 
-# 这是项目主页的案例。你可以在这里放置你的主体内容。
+# 这是项目主页的案例。您可以在这里放置您的主体内容。
 
-# 想要使用此布局，你需要在页面 front matter 中设置 `home: true`。
+# 想要使用此布局，您需要在页面 front matter 中设置 `home: true`。
 
 # 配置项的相关说明详见 [项目主页配置](https://theme-hope.vuejs.press/zh/guide/layout/home/)。
