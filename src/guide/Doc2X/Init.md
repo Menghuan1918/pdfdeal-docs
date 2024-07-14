@@ -31,10 +31,11 @@ You can also add the above command to `~/.zshrc` or `~/.bashrc` to persist the e
 Please use the following command to set the environment variable for the current terminal:
 
 ```PowerShell
-setx DOC2X_APIKEY "Your API Key"
+setx "DOC2X_APIKEY" "Your API Key"
 ```
 
-You can add it to `This PC` -> `Properties` -> `Advanced system settings` -> `Environment Variables` -> `System variables` to persist it.
+
+You can use the command `setx "DOC2X_APIKEY" "Your API Key"` in order to save the variable persistently (instead of the current terminal session).
 
 ## Setting API Key for a Single Project
 

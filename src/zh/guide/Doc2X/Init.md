@@ -31,10 +31,10 @@ export DOC2X_APIKEY = "Your API Key"
 请使用以下命令为当前终端设置环境变量：
 
 ```PowerShell
-setx DOC2X_APIKEY "Your API Key"
+set "DOC2X_APIKEY" "Your API Key"
 ```
 
-您可以将其添加至`此电脑` -> `属性` -> `高级系统设置` -> `环境变量` -> `系统变量`中以持久化。
+您可以使用命令`setx "DOC2X_APIKEY" "Your API Key"`中以持久化保存变量(而不是当前终端会话)。
 
 ## 为项目单独设置API密匙
 
