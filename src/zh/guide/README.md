@@ -5,6 +5,35 @@ icon: lightbulb
 
 ## 使用指南
 
+从PYPI上安装：
+
+::: code-tabs#python
+
+@tab pip
+
+```bash
+pip install --upgrade pdfdeal
+```
+
+@tab conda
+
+```zsh
+conda create -n pdfdeal python=3.11
+conda activate pdfdeal
+pip install --upgrade pdfdeal
+```
+
+@tab uv
+
+```zsh
+uv venv
+source .venv/bin/activate # For Linux
+source .venv/Scripts/activate # For Windows
+uv pip install --upgrade pdfdeal
+```
+
+:::
+
 ### 使用CLI工具
 
 目前有命令行工具`doc2x`，其用于使用Doc2X的API快速批量处理PDF或者图片。

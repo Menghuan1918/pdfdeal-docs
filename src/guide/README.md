@@ -6,6 +6,35 @@ icon: lightbulb
 
 ## Guidelines for use
 
+Install from PYPI:
+
+::: code-tabs#python
+
+@tab pip
+
+```bash
+pip install --upgrade pdfdeal
+```
+
+@tab conda
+
+```zsh
+conda create -n pdfdeal python=3.11
+conda activate pdfdeal
+pip install --upgrade pdfdeal
+```
+
+@tab uv
+
+```zsh
+uv venv
+source .venv/bin/activate # For Linux
+source .venv/Scripts/activate # For Windows
+uv pip install --upgrade pdfdeal
+```
+
+:::
+
 ### Using CLI tools
 
 There is a command line tool, `doc2x`, which is used to quickly batch process PDFs or images using the Doc2X API.
