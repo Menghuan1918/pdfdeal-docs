@@ -13,6 +13,7 @@ icon: wrench
 ### ✨ Feature Changes
 
 - Added CLI command line program `doc2x`, for quickly using doc2x to batch process PDF or image files, please refer to [here](../guide/CLI/README.md) for usage
+- Adaptation of CLI commands to graphrag has been added, please refer to [here](../guide/CLI/README.md) for usage
 - Updated Doc2X document translation functions to use [see here](../guide/Doc2X/5.md)
 - Enhanced exception handling
 - Function return parameters have changed, will return more detailed content
