@@ -3,6 +3,16 @@ title: Update Log
 icon: wrench
 ---
 
+## V0.2.1
+
+### ✨ Feature Changes
+
+- Updated to adapt new doc2x rate limiting rules from requests per minute RPM -> simultaneous task requests.
+
+### 🔧 BUG Fixes
+
+- CLI command line program `doc2x` does not save error logs, only prints them in the terminal.
+
 ## V0.2.0
 
 > [!caution]

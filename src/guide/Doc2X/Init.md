@@ -58,12 +58,13 @@ from pdfdeal import Doc2X
 Client = Doc2X(apikey="Your API key")
 ```
 
-## Customization: RPM Request Limit
+## Customization: Simultaneous request limit
+
 
 > [!caution]
-> Unless you are sure you need to modify the request frequency, do not change `rpm` (requests per minute), please use the default setting.
+> Unless you are sure you need to modify the request frequency, do not change simultaneous request limit, please use the default setting.
 
 ```python
 from pdfdeal import Doc2X
-Client = Doc2X(rpm=1)
+Client = Doc2X(thread=123)
 ```

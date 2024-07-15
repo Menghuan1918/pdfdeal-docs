@@ -57,12 +57,13 @@ from pdfdeal import Doc2X
 Client = Doc2X(apikey="Your API key")
 ```
 
-## 自定义：RPM请求限制
+## 自定义：同时请求限制
 
 > [!caution]
-> 除非您确信您需要修改请求频率，请不要修改 `rpm`（每分钟请求数），请使用默认的设置。
+> 除非您确信您需要修改请求频率，请不要修改同时请求限制，请使用默认的设置。
+
 
 ```python
 from pdfdeal import Doc2X
-Client = Doc2X(rpm=1)
+Client = Doc2X(thread=123)
 ```
