@@ -3,6 +3,17 @@ title: Update Log
 icon: wrench
 ---
 
+## V0.2.2
+
+### ✨ Feature Changes
+
+- CLI command line program `doc2x` supports automatic decompression of downloaded zip files
+
+### 🔧 BUG Fixes
+
+- The CLI command line program `doc2x` does not save the key locally in some cases.
+- The `Replace image links in Markdown files with links to local files` function saves images in the wrong format (saves jpg images as png).
+
 ## V0.2.1
 
 ### ✨ Feature Changes
