@@ -14,7 +14,7 @@ icon: file-import
 | 参数 | 类型 | 是否必须 | 默认值 | 描述 |
 |------|------|----------|--------|------|
 | `mdfile` | `str` | 是 | - | Markdown 文件路径 |
-| `replace` | `str` | 是 | - | 替换类型，目前仅支持 `"local"`，未来将添加 `"R2"`、`"S3"`、`"OSS"` 等选项 |
+| `replace` | `str` | 是 | - | 替换类型，目前仅支持 `"local"` |
 | `outputpath` | `str` | 是 | - | 保存图片的输出路径 |
 | `relative` | `bool` | 否 | `False` | 是否使用相对路径保存图片，默认为 `False` |
 

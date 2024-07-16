@@ -36,7 +36,7 @@ uv pip install --upgrade graphrag pdfdeal
 
 Create two folders to store the PDFs before processing and the txt files after processing:
 
-```zsh
+```bash
 mkdir ./pdf
 mkdir -p ./ragtest/input
 ```
@@ -47,7 +47,7 @@ Go to [Doc2X](https://doc2x.com/), click on identity information, and copy your 
 
 Use `pdfdeal`'s CLI tool `doc2x` for batch processing, please add the long flag `--graphrag` to enable special adaptation for graphrag:
 
-```zsh
+```bash
 doc2x -k "Your Key Here" -o ./ragtest/input -p --graphrag ./pdf
 ```
 
@@ -59,13 +59,13 @@ Wait for it to complete processing:
 
 ## Step2: Build knowledge graph
 
-```zsh
+```bash
 python -m graphrag.index --init --root ./ragtest
 ```
 
 Modify `settings.yaml` and `.env` files, then build:
 
-```zsh
+```bash
 python -m graphrag.index --root ./ragtest
 ```
 

@@ -28,6 +28,7 @@ icon: code
 | `--equation` |        | 是否使用纯公式模式，仅对图片有效，默认是 False                                                 |
 | `-c`   | `--clear`        | 清除所有关于 Doc2X 的全局设置                                                               |
 | | `--graphrag`| 将 md 文档转换为 txt 格式，用于将输出转换为 graphRAG 可接受的 txt 格式。此时输出格式需要指定为 md 或 md_dollar |
+| | `--unzip`| 自动将zip文件解压(当非docx输出格式时默认输出是一个zip压缩包)|
 
 您可以直接输入`pythom -m doc2x`来运行程序，其会引导您输入剩余所需的参数。注意此时输出路径会是默认的'./Output'，格式为默认的`md_dollar`
 
@@ -37,6 +38,12 @@ icon: code
 
 ### 将./pdf文件夹中所有pdf转换为graphRAG接受的txt格式
 
-```zsh
+```bash
 doc2x -k "YOUR_KEY_HERE" -o ./ragtest/input -p --graphrag ./pdf 
+```
+
+### 将./pdf文件夹中所有pdf文件转换为md文件
+
+```bash
+doc2x -p -o ./Output --unzip ./pdf 
 ```

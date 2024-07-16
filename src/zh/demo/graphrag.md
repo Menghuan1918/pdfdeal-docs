@@ -36,7 +36,7 @@ uv pip install --upgrade graphrag pdfdeal
 
 新建两个文件夹，用于存储处理前的PDF以及处理后的txt文件：
 
-```zsh
+```bash
 mkdir ./pdf
 mkdir -p ./ragtest/input
 ```
@@ -47,7 +47,7 @@ mkdir -p ./ragtest/input
 
 使用`pdfdeal`的CLI工具`doc2x`进行批处理，请加上长标示`--graphrag`以启用对graphrag的特殊适配：
 
-```zsh
+```bash
 doc2x -k "Your Key Here" -o ./ragtest/input -p --graphrag ./pdf
 ```
 
@@ -59,13 +59,13 @@ doc2x -k "Your Key Here" -o ./ragtest/input -p --graphrag ./pdf
 
 ## Step2:构建知识图谱
 
-```zsh
+```bash
 python -m graphrag.index --init --root ./ragtest
 ```
 
 修改`settings.yaml`以及`.env`文件，随后进行构建：
 
-```zsh
+```bash
 python -m graphrag.index --root ./ragtest
 ```
 

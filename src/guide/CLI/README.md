@@ -28,6 +28,7 @@ The `doc2x` command is used for batch processing of PDF or image files, converti
 | `--equation`  |                  | Whether to use pure formula mode; only effective for images; defaults to False                      |
 | `-c`       | `--clear`          | Clear all global settings related to Doc2X                                                           |
 | | `--graphrag`| Change md document to txt form, used for output is converted to the txt form accepted by graphRAG. The output format needs to be md or md_dollar at this time |
+| | `--unzip`|Automatically decompress zip files (default output is a zip archive when not in docx output format)|
 
 You can directly run the program by entering 'python -m doc2x', which will guide you through the remaining required parameters. Note that the output path will default to './Output', and the format will default to 'md_dollar'.
 
@@ -37,6 +38,12 @@ You can directly run the program by entering 'python -m doc2x', which will guide
 
 ### Convert . /pdf folder into graphRAG accepted txt format
 
-```zsh
+```bash
 doc2x -k "YOUR_KEY_HERE" -o ./ragtest/input -p --graphrag ./pdf 
+```
+
+### Convert . /pdf folder in all pdf files into md files
+
+```bash
+doc2x -p -o ./Output --unzip ./pdf 
 ```

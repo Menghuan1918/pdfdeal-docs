@@ -18,7 +18,7 @@ pip install --upgrade pdfdeal
 
 @tab conda
 
-```zsh
+```bash
 conda create -n pdfdeal python=3.11
 conda activate pdfdeal
 pip install --upgrade pdfdeal
@@ -26,7 +26,7 @@ pip install --upgrade pdfdeal
 
 @tab uv
 
-```zsh
+```bash
 uv venv
 source .venv/bin/activate # For Linux
 source .venv/Scripts/activate # For Windows

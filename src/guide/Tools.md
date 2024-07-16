@@ -14,7 +14,7 @@ Please refer to the directory on the right to find the tool you want to use.
 | Parameter | Type | Required | Default Value | Description |
 |-----------|------|----------|---------------|-------------|
 | `mdfile` | `str` | Yes | - | Path to the Markdown file |
-| `replace` | `str` | Yes | - | Replacement type, currently only supports `"local"`, future options will include `"R2"`, `"S3"`, `"OSS"` etc. |
+| `replace` | `str` | Yes | - | Replacement type, currently only supports `"local"`|
 | `outputpath` | `str` | Yes | - | Output path for saving images |
 | `relative` | `bool` | No | `False` | Whether to save images using relative paths, default is `False` |
 
