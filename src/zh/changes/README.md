@@ -3,6 +3,13 @@ title: 更新日志
 icon: wrench
 ---
 
+## V0.2.3
+
+### 🔧 BUG修复
+
+- 修复了无法在Jupyter Notebook中使用的问题
+- 修复了`pdfdeal`函数中速率限制器没生效的问题
+
 ## V0.2.2
 
 ### ✨ 功能变动

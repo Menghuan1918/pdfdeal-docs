@@ -3,6 +3,13 @@ title: Update Log
 icon: wrench
 ---
 
+## V0.2.3
+
+### 🔧 BUG Fixes
+
+- Fixed issue that did not work in Jupyter Notebook
+- Fixed rate limiter not working in `pdfdeal` function.
+
 ## V0.2.2
 
 ### ✨ Feature Changes
