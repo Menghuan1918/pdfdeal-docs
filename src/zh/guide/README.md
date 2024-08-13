@@ -42,22 +42,20 @@ uv pip install --upgrade pdfdeal
 
 ### Doc2X支持
 
-您可以单独使用库中的Doc2X相关部分，除了请求的封装外，其还附带有RPM限制，批处理，自动处理异常的功能。
+Doc2X请求支持，除了请求的封装外，其还附带有RPM限制，批处理，自动处理异常的功能。
 
 详细请参见[Doc2X使用手册](Doc2X/README.md)
 
-如果您想直接使用封装的异步请求函数，请使用`from pdfdeal.Doc2X.Convert import *`导入函数，并参照[这个文件](https://github.com/Menghuan1918/pdfdeal/blob/main/src/pdfdeal/Doc2X/Convert.py)中的函数说明。
+如果您想使用封装的异步请求函数，请参见[Doc2X 异步请求](./Doc2X/async.md)
 
 ### 内置的文件处理工具
 
-pdfdeal内置了一些方便的文件处理工具，例如快速解压zip文件，批量重命名，将一个列表保存到PDF等工具。
-
-请查看[使用文档](Tools.md)
+pdfdeal内置了一些方便的[转换前/后的处理工具](./Tools/README.md)，例如将图片上传到远端储存服务(阿里OSS等)，为MD文档添加分割符等。
 
 ### 对PDF文件进行处理
 
 您还可以使用离线OCR对PDF进行处理。目前内建有`easyocr`以及`pytesseract`的支持，您也可以自定义OCR函数进行处理。
 
-注意相对Doc2X而言，离线OCR表现很差。
+注意相对Doc2X而言，离线OCR表现很差，不建议使用。
 
 请查看[使用文档](pdfdeal/README.md)

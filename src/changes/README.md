@@ -3,6 +3,19 @@ title: Update Log
 icon: wrench
 ---
 
+## V0.2.4
+
+### ✨ Feature changes
+
+- New MD Document Auto Split tool
+- New MD document image upload tool
+- New built-in upload tool: AliCloud OSS
+- CLI tool will keep the source name of the file (instead of UUID name).
+
+### 🔧 BUG Fixes
+
+- Fixed an issue where an error message was not displayed when a status request failed
+
 ## V0.2.3
 
 ### 🔧 BUG Fixes

@@ -19,6 +19,12 @@ actions:
     link: ./demo/
 
 features:
+
+  - title: 查看中文文档
+    icon: language
+    details: 请从从此处查看中文文档，或者您也可以点击右上角图标切换中文/English
+    link: https://menghuan1918.github.io/pdfdeal-docs/zh/guide/
+
   - title: Quick Start
     icon: clipboard-check
     details: Quickly batch convert PDFs or images using the Doc2X API with the command line tool `doc2x`.
