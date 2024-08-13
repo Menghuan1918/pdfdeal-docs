@@ -133,7 +133,7 @@ export default hopeTheme({
       // mathjax: true,
 
       // Install mermaid before enabling it
-      // mermaid: true,
+      mermaid: true,
 
       // playground: {
       //   presets: ["ts", "vue"],
