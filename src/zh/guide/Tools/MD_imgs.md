@@ -14,8 +14,8 @@ icon: photo-film
 > 这个工具将会替换源文件中的内容，请注意您的文件数据备份
 
 目录：
-- [处理单个MD文档](#md_replace_imgs)
-- [处理某个目录中的MD文档](#mds_replace_imgs)
+- [处理单个MD文档](#md-replace-imgs)
+- [处理某个目录中的MD文档](#mds-replace-imgs)
 
 ## `md_replace_imgs`
 

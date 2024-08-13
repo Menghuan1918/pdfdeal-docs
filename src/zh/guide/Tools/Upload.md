@@ -47,7 +47,7 @@ def upload_file(local_file_path, remote_file_path):
 
 请首先导入函数并使用您的阿里云 ACCESS_KEY 进行初始化。
 
-> [!important]
+> [!warning]
 > 首先您需要安装包`oss2`进行使用：`pip install -U oss2`
 >
 > 请确保您的 OSS 已经将权限设置为公开可读
