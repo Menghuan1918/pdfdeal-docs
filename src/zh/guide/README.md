@@ -5,7 +5,7 @@ icon: lightbulb
 
 ## 使用指南
 
-从PYPI上安装：
+库支持 python 3.8-3.12 版本，并已使用GitHub Action在Windows/Linux/MacOS 系统中进行测试，从PYPI上安装：
 
 ::: code-tabs#python
 
@@ -56,6 +56,8 @@ pdfdeal内置了一些方便的文件处理工具，例如快速解压zip文件�
 
 ### 对PDF文件进行处理
 
-您还可以使用离线OCR对PDF进行处理。目前内建有`easyocr`以及`pytesseract`的支持，您也可以自定义OCR函数进行处理。注意离线OCR对表格以及公式场景表现很差。
+您还可以使用离线OCR对PDF进行处理。目前内建有`easyocr`以及`pytesseract`的支持，您也可以自定义OCR函数进行处理。
+
+注意相对Doc2X而言，离线OCR表现很差。
 
 请查看[使用文档](pdfdeal/README.md)
