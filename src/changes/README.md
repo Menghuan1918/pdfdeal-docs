@@ -3,6 +3,20 @@ title: Update Log
 icon: wrench
 ---
 
+## V0.2.5
+
+### ✨ Feature Changes
+
+- Added built-in upload tool: S3
+
+### 🔧 Bug Fixes
+
+- MD Document Image Uploader could not handle relative path images.
+
+### 🚀 Others
+
+- Introduced Ruff in GitHub Action for code checking and code formatting.
+
 ## V0.2.4
 
 ### ✨ Feature changes
