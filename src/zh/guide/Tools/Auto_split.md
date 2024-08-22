@@ -22,7 +22,7 @@ icon: scissors
 | ------------- | ----- | --------------------- | ------------------------------------------------------------------------- |
 | `mdfile`      | `str` | 必填                  | Markdown 文件路径                                                         |
 | `mode`        | `str` | `"title"`             | 分割方式。**目前仅支持 `title`（按标题分割）**                            |
-| `out_type`    | `str` | `"single"`            | 输出方式。目前仅支持 `single`（输出为一个文件）和 `replace`（替换原文件） |
+| `out_type`    | `str` | `"single"`            | 输出方式。目前支持 `single`（输出为一个文件）和 `replace`（替换原文件）以及`multi`（按段输出多个文件） |
 | `split_str`   | `str` | `"=+=+=+=+=+=+=+=+="` | 用于分割 Markdown 文件的字符串                                            |
 | `output_path` | `str` | `"./Output"`          | 输出文件路径。当 `out_type` 为 `replace` 时无效                           |
 
@@ -36,7 +36,7 @@ icon: scissors
 ### 注意事项
 
 - 目前仅支持按标题分割
-- 输出方式目前仅支持输出为一个文件或替换原文件
+- 输出方式为`multi`时，将会按段输出多个文件，其会以`源文件名+分段标题.md`命名，且此时返回的是文件夹路径
 
 ## auto_split_mds
 
@@ -48,7 +48,7 @@ icon: scissors
 | ------------- | ------ | --------------------- | ------------------------------------------------------------------------- |
 | `mdpath`      | `str`  | 必填                  | 包含 Markdown 文件的文件夹路径                                            |
 | `mode`        | `str`  | `"title"`             | 分割方式。**目前仅支持 `title`（按标题分割）**                            |
-| `out_type`    | `str`  | `"single"`            | 输出方式。目前仅支持 `single`（输出为一个文件）和 `replace`（替换原文件） |
+| `out_type`    | `str`  | `"single"`            | 输出方式。目前支持 `single`（输出为一个文件）和 `replace`（替换原文件）以及`multi`（按段输出多个文件） |
 | `split_str`   | `str`  | `"=+=+=+=+=+=+=+=+="` | 用于分割 Markdown 文件的字符串                                            |
 | `output_path` | `str`  | `"./Output"`          | 输出分割文件的路径。当 `out_type` 为 `replace` 时无效                     |
 | `recursive`   | `bool` | `True`                | 是否递归搜索子目录                                                        |
@@ -77,6 +77,9 @@ icon: scissors
 
 - `list1` 和 `list2` 的长度相同
 - 当 `out_type` 为 `replace` 时，`output_path` 参数无效
+- 输出方式为`multi`时，将会按段输出多个文件，其会以`源文件名+分段标题.md`命名，且此时返回的是文件夹路径
+
+### 示范代码
 
 ```python
 from pdfdeal.file_tools import auto_split_mds

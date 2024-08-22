@@ -2,6 +2,21 @@
 title: Update Log
 icon: wrench
 ---
+## V0.3.0
+
+### ✨ Feature Changes
+
+- [Document Splitting](... /guide/Tools/Auto_split.md) supports outputting multiple files by paragraph.
+- New [Document Unzip](... /guide/Tools/Unzip.md).
+
+### 🔧 BUG Fixes
+
+- Fixed terminology for switching state prompts
+- Fixed not being able to print error report stacks
+
+### 🚀 Others
+
+- Documentation page improved for Linux users (more friendly font designation)
 
 ## V0.2.5
 

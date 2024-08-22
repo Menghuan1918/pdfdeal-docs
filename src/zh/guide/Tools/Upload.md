@@ -110,7 +110,7 @@ from pdfdeal.FileTools.Img.S3 import S3
 - Customized_Domain：您的S3自定义域名，注意`{Customized_Domain}/{remote_file_path}`将作为最终的图片地址返回。请不要忘记为自定义域名添加`http://`或`https://`前缀。
 
 > [!warning]
-> 首先您需要安装包`oss2`进行使用：`pip install -U boto3`
+> 首先您需要安装包`boto3`进行使用：`pip install -U boto3`
 >
 > 请确保您的 S3 已经将权限设置为公开可读
 
