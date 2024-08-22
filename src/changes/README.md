@@ -6,8 +6,8 @@ icon: wrench
 
 ### ✨ Feature Changes
 
-- [Document Splitting](... /guide/Tools/Auto_split.md) supports outputting multiple files by paragraph.
-- New [Document Unzip](... /guide/Tools/Unzip.md).
+- [Document Splitting](../guide/Tools/Auto_split.md) supports outputting multiple files by paragraph.
+- New [Document Unzip](../guide/Tools/Unzip.md).
 
 ### 🔧 BUG Fixes
 
