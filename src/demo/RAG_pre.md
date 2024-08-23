@@ -225,7 +225,7 @@ Follow the normal knowledge base import process by importing the final Markdown 
 >
 > **Be sure to change the md format to txt and upload it!**
 >
-> 详细请参见这个[issue](https://github.com/langgenius/dify/issues/7228)
+> Please see this [issue](https://github.com/langgenius/dify/issues/7228)
 
 **First change the md format of all files to txt format.**
 
