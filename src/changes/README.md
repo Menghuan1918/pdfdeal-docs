@@ -17,6 +17,7 @@ icon: wrench
 ### 🚀 Others
 
 - Documentation page improved for Linux users (more friendly font designation)
+- Added demonstration of use with RAG applications (e.g. Fastgpt, Dify, etc.)
 
 ## V0.2.5
 
