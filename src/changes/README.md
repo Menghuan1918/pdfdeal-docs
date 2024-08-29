@@ -2,6 +2,21 @@
 title: Update Log
 icon: wrench
 ---
+## V0.3.1
+
+> [!caution]
+> ==After version 0.3.1== the output has been updated to `logging`, which by default only outputs Warning and above. If you want to see the processing, set the `logging` level to INFO:
+> ```python
+> import logging
+> httpx_logger = logging.getLogger("httpx")
+> httpx_logger.setLevel(logging.WARNING)
+> logging.basicConfig(level=logging.INFO)
+> ```
+
+### 🚀 Others
+
+- Changed the package information output to the `logging` module, which doesn't output a bunch of stuff anymore
+
 ## V0.3.0
 
 ### ✨ Feature Changes

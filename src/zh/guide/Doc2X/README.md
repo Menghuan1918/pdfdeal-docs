@@ -3,6 +3,15 @@ title: Doc2X支持
 icon: file-contract
 ---
 
+> [!warning]
+> ==0.3.1版本==后更新输出为`logging`，默认情况下仅会输出Warnings及以上等级的信息。如您希望查看处理过程，请设置`logging`等级为INFO：
+> ```python
+> import logging
+> httpx_logger = logging.getLogger("httpx")
+> httpx_logger.setLevel(logging.WARNING)
+> logging.basicConfig(level=logging.INFO)
+> ```
+
 ![](../../../images/doc2x.png)
 
 您可以使用抽象包装好的类，或者仅仅使用[异步函数](./async.md)发起请求。

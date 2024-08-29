@@ -2,6 +2,22 @@
 title: 更新日志
 icon: wrench
 ---
+
+## V0.3.1
+
+> [!caution]
+> ==0.3.1版本==后更新输出为`logging`，默认情况下仅会输出Warning及以上等级的信息。如您希望查看处理过程，请设置`logging`等级为INFO：
+> ```python
+> import logging
+> httpx_logger = logging.getLogger("httpx")
+> httpx_logger.setLevel(logging.WARNING)
+> logging.basicConfig(level=logging.INFO)
+> ```
+
+### 🚀 其他
+
+- 更改包信息输出方式为`logging`模块，不会再输出一堆东西了
+
 ## V0.3.0
 
 ### ✨ 功能变动

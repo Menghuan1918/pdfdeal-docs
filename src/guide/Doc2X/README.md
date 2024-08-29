@@ -3,6 +3,15 @@ title: Doc2X support
 icon: file-contract
 ---
 
+> [!warning]
+> ==After version 0.3.1== the output has been updated to `logging`, which by default only outputs Warning and above. If you want to see the processing, set the `logging` level to INFO:
+> ```python
+> import logging
+> httpx_logger = logging.getLogger("httpx")
+> httpx_logger.setLevel(logging.WARNING)
+> logging.basicConfig(level=logging.INFO)
+> ```
+
 ![](../../images/doc2x.png)
 
 You can use abstract wrapped classes or just use asynchronous functions to initiate requests.

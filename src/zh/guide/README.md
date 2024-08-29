@@ -5,6 +5,15 @@ icon: lightbulb
 
 ## 使用指南
 
+> [!warning]
+> ==0.3.1版本==后更新输出为`logging`，默认情况下仅会输出Warnings及以上等级的信息。如您希望查看处理过程，请设置`logging`等级为INFO：
+> ```python
+> import logging
+> httpx_logger = logging.getLogger("httpx")
+> httpx_logger.setLevel(logging.WARNING)
+> logging.basicConfig(level=logging.INFO)
+> ```
+
 库支持 python 3.8-3.12 版本，并已使用GitHub Action在Windows/Linux/MacOS 系统中进行测试，从PYPI上安装：
 
 ::: code-tabs#python
