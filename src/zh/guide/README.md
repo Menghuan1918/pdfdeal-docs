@@ -5,16 +5,7 @@ icon: lightbulb
 
 ## 使用指南
 
-> [!warning]
-> ==0.3.1版本==后更新输出为`logging`，默认情况下仅会输出Warnings及以上等级的信息。如您希望查看处理过程，请设置`logging`等级为INFO：
-> ```python
-> import logging
-> httpx_logger = logging.getLogger("httpx")
-> httpx_logger.setLevel(logging.WARNING)
-> logging.basicConfig(level=logging.INFO)
-> ```
-
-库支持 python 3.8-3.12 版本，并已使用GitHub Action在Windows/Linux/MacOS 系统中进行测试，从PYPI上安装：
+库支持 python 3.8-3.13 版本，并尽可能使用GitHub Action在Windows/Linux/MacOS 系统中进行测试，从PYPI上安装：
 
 ::: code-tabs#python
 
@@ -27,7 +18,7 @@ pip install --upgrade pdfdeal
 @tab conda
 
 ```bash
-conda create -n pdfdeal python=3.11
+conda create -n pdfdeal python=3.12
 conda activate pdfdeal
 pip install --upgrade pdfdeal
 ```
@@ -45,9 +36,11 @@ uv pip install --upgrade pdfdeal
 
 ### 使用CLI工具
 
-目前有命令行工具`doc2x`，其用于使用Doc2X的API快速批量处理PDF或者图片。
+~~目前有命令行工具`doc2x`，其用于使用Doc2X的API快速批量处理PDF或者图片。~~
 
-您可以在[此处查看帮助](CLI/README.md)，或者输入`python -m doc2x -h`查看帮助。
+~~您可以在[此处查看帮助](CLI/README.md)，或者输入`python -m doc2x -h`查看帮助。~~
+
+命令行工具将于0.4.1版本重新加入。
 
 ### Doc2X支持
 
@@ -61,10 +54,6 @@ Doc2X请求支持，除了请求的封装外，其还附带有RPM限制，批处
 
 pdfdeal内置了一些方便的[转换前/后的处理工具](./Tools/README.md)，例如将图片上传到远端储存服务(阿里OSS等)，为MD文档添加分割符等。
 
-### 对PDF文件进行处理
+### V1接口
 
-您还可以使用离线OCR对PDF进行处理。目前内建有`easyocr`以及`pytesseract`的支持，您也可以自定义OCR函数进行处理。
-
-注意相对Doc2X而言，离线OCR表现很差，不建议使用。
-
-请查看[使用文档](pdfdeal/README.md)
+V1接口已经被弃用，但是您仍然可以在[此处](./V1/README.md)查看。

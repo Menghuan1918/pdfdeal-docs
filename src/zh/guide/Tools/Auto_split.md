@@ -2,8 +2,11 @@
 title: MD文档拆分
 icon: scissors
 ---
+您可能需要安装一些额外依赖以使用：
 
-此工具需要您使用 ==0.2.4== 或更高版本。
+```bash
+pip install --upgrade "pdfdeal[rag]"
+```
 
 这个工具将会尝试按照标题对 MD 文档进行拆分，并为其添加分段标识符，以方便与其他 RAG 工具(例如fastgpt，Dify等)结合使用。
 

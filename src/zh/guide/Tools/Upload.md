@@ -2,6 +2,11 @@
 title: 内置上传工具
 icon: upload
 ---
+您可能需要安装一些额外依赖以使用：
+
+```bash
+pip install --upgrade "pdfdeal[rag]"
+```
 
 此工具需要您使用 ==0.2.4== 或更高版本。
 

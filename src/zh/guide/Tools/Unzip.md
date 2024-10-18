@@ -3,6 +3,12 @@ title: 文件解压处理
 icon: file-zipper
 ---
 
+您可能需要安装一些额外依赖以使用：
+
+```bash
+pip install --upgrade "pdfdeal[rag]"
+```
+
 ## `unzips`
 
 解压 ZIP 文件并返回提取文件夹的路径。

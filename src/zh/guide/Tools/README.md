@@ -9,3 +9,9 @@ icon: file-import
 - [将MD中本地/在线图片上传到远端储存服务](./MD_imgs.md)
 - [为MD文档添加分割符](./Auto_split.md)
 - [文件解压处理](./Unzip.md)
+
+但您可能需要安装一些额外依赖以使用：
+
+```bash
+pip install --upgrade "pdfdeal[rag]"
+```

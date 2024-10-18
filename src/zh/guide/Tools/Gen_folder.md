@@ -2,6 +2,11 @@
 title: 文件目录获得工具
 icon: folder-tree
 ---
+您可能需要安装一些额外依赖以使用：
+
+```bash
+pip install --upgrade "pdfdeal[rag]"
+```
 
 目录：
 - [仅生成指定目录中特定格式文件列表](#gen-folder-list)
