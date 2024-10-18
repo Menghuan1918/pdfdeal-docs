@@ -12,7 +12,6 @@ icon: file-contract
 > logging.basicConfig(level=logging.INFO)
 > ```
 
-![](../../../images/doc2x.png)
 
 您可以使用抽象包装好的类，或者仅仅使用[异步函数](./async.md)发起请求。
 

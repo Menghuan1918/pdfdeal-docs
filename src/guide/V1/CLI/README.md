@@ -32,7 +32,6 @@ The `doc2x` command is used for batch processing of PDF or image files, converti
 
 You can directly run the program by entering 'python -m doc2x', which will guide you through the remaining required parameters. Note that the output path will default to './Output', and the format will default to 'md_dollar'.
 
-![Some Examples](../../images/cli1.png)
 
 ## Example
 

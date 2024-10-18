@@ -12,7 +12,6 @@ icon: file-contract
 > logging.basicConfig(level=logging.INFO)
 > ```
 
-![](../../images/doc2x.png)
 
 You can use abstract wrapped classes or just use asynchronous functions to initiate requests.
 
