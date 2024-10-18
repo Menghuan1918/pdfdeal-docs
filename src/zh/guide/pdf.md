@@ -51,3 +51,125 @@ Output
         └── sampleB.docx
 ```
 :::
+
+## 示范代码
+
+### 使用 Doc2X PDF API 处理指定文件夹中所有 PDF 文件
+
+```python
+from pdfdeal import Doc2X
+
+client = Doc2X(apikey="Your API key",debug=True)
+success, failed, flag = client.pdf2file(
+    pdf_file="tests/pdf",
+    output_path="./Output",
+    output_format="docx",
+)
+print(success)
+print(failed)
+print(flag)
+```
+
+::: tabs#code
+
+@tab 运行中日志输出
+```bash
+2024-10-18 22:49:10,691 - pdfdeal.doc2x - INFO - Uploading tests/pdf/test/sampleB.pdf...
+2024-10-18 22:49:12,281 - pdfdeal.doc2x - INFO - Processing 0192a01a-9b64-75eb-94d1-9c0ddef43089 : 2%
+2024-10-18 22:49:13,983 - pdfdeal.doc2x - INFO - Conversion successful for tests/pdf/test/sampleB.pdf with uid 0192a01a-9b64-75eb-94d1-9c0ddef43089
+2024-10-18 22:49:13,983 - pdfdeal.doc2x - INFO - Parsing 0192a01a-9b64-75eb-94d1-9c0ddef43089 to docx...
+2024-10-18 22:49:20,066 - pdfdeal.doc2x - INFO - Downloading 0192a01a-9b64-75eb-94d1-9c0ddef43089 docx file to ./Output...
+2024-10-18 22:49:22,351 - pdfdeal.doc2x - INFO - Successfully converted 1 file(s).
+```
+@tab success，failed，flag变量结果
+```python
+['./Output/sampleB.docx']
+[{'error': '', 'path': ''}]
+False
+```
+:::
+
+### 使用 Doc2X PDF API 处理指定的 PDF 文件并指定导出的文件名
+
+```python
+from pdfdeal import Doc2X
+
+client = Doc2X(debug=True)
+success, failed, flag = client.pdf2file(
+    pdf_file=["tests/pdf/sample.pdf"],
+    #其等效于 pdf_file="tests/pdf/sample.pdf",
+    output_path="./Output/test/single/pdf2file",
+    output_names=["sample1.zip"],
+    output_format="md_dollar",
+)
+print(success)
+print(failed)
+print(flag)
+```
+
+::: tabs#code
+
+@tab 运行中日志输出
+```bash
+2024-10-18 22:52:41,808 - pdfdeal.doc2x - INFO - Uploading tests/pdf/sample.pdf...
+2024-10-18 22:52:43,838 - pdfdeal.doc2x - INFO - Processing 0192a01d-d4f5-7bcf-adb8-c0f9aa7e2b5d : 2%
+2024-10-18 22:52:45,889 - pdfdeal.doc2x - INFO - Conversion successful for tests/pdf/sample.pdf with uid 0192a01d-d4f5-7bcf-adb8-c0f9aa7e2b5d
+2024-10-18 22:52:45,889 - pdfdeal.doc2x - INFO - Parsing 0192a01d-d4f5-7bcf-adb8-c0f9aa7e2b5d to md_dollar...
+2024-10-18 22:52:48,791 - pdfdeal.doc2x - INFO - Downloading 0192a01d-d4f5-7bcf-adb8-c0f9aa7e2b5d md_dollar file to ./Output/test/single/pdf2file...
+2024-10-18 22:52:49,762 - pdfdeal.doc2x - INFO - Successfully converted 1 file(s).
+
+```
+@tab success，failed，flag变量结果
+```python
+['./Output/test/single/pdf2file/sample1.zip']
+[{'error': '', 'path': ''}]
+False
+```
+:::
+
+### 报错信息示范
+
+以下代码中使用的`tests/pdf/sample_bad.pdf`文件是一个无法打开的损坏的PDF文件：
+
+```python
+from pdfdeal import Doc2X
+
+client = Doc2X(debug=True)
+success, failed, flag = client.pdf2file(
+    pdf_file="tests/pdf/sample_bad.pdf",
+    output_path="./Output/test/single/pdf2file",
+    output_names=["sample1.zip"],
+    output_format="md_dollar",
+)
+print(success)
+print(failed)
+print(flag)
+```
+::: tabs#code
+
+@tab 运行中日志输出
+```bash
+EOF marker not found
+2024-10-18 22:54:28,870 - pdfdeal.doc2x - WARNING - Failed to get page count for tests/pdf/sample_bad.pdf: Stream has ended unexpectedly
+2024-10-18 22:54:28,870 - pdfdeal.doc2x - INFO - Uploading tests/pdf/sample_bad.pdf...
+ERROR:root:Error in 'upload_pdf': RequestError - parse_pdf_invalid: 传入的文件不是有效的PDF文件 (File is not a valid PDF)
+UID: Failed to get uid! Please set DEBUG mode to check the failed file path.
+Trace ID: None
+You can try to do:
+不是有效的PDF文件,考虑PDF可能有兼容性问题, 重新打印后再尝试。仍然失败请反馈request_id给负责人 (File is not a valid PDF. Consider reprinting the PDF if compatibility issues persist. Report request_id if it still fails)
+2024-10-18 22:54:29,726 - pdfdeal.doc2x - ERROR - 1 file(s) failed to convert, please enable DEBUG mod to check or read the output variable.
+====================================
+Failed to convert tests/pdf/sample_bad.pdf: parse_pdf_invalid: 传入的文件不是有效的PDF文件 (File is not a valid PDF)
+UID: Failed to get uid! Please set DEBUG mode to check the failed file path.
+Trace ID: None
+You can try to do:
+不是有效的PDF文件,考虑PDF可能有兼容性问题, 重新打印后再尝试。仍然失败请反馈request_id给负责人 (File is not a valid PDF. Consider reprinting the PDF if compatibility issues persist. Report request_id if it still fails)
+2024-10-18 22:54:29,726 - pdfdeal.doc2x - INFO - Successfully converted 0 file(s).
+```
+@tab success，failed，flag变量结果
+```python
+['']
+[{'error': 'parse_pdf_invalid: 传入的文件不是有效的PDF文件 (File is not a valid PDF)\nUID: Failed to get uid! Please set DEBUG mode to check the failed file path.\nTrace ID: None\nYou can try to do:\n不是有效的PDF文件,考虑PDF可能有兼容性问题, 重新打印后再尝试。仍然失败请反馈request_id给负责人 (File is not a valid PDF. Consider reprinting the PDF if compatibility issues persist. Report request_id if it still fails)', 'path': 'tests/pdf/sample_bad.pdf'}]
+True
+```
+:::
