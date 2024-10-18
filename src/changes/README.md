@@ -2,6 +2,26 @@
 title: Update Log
 icon: wrench
 ---
+
+## V0.4.0
+
+> [!caution]
+> The V1 interface of Doc2X will be deprecated in the near future! Please migrate to the V2 interface as soon as possible. Please check the [Interface Migration Guide](. /v1tov2.md) to see if any code changes are required for your scenario.
+>
+> **In most cases, you will not need to change any code**, and the `0.4.X` version will be as upwardly compatible with the `0.3.1` version as possible.
+
+### ✨ Feature Changes
+
+- Support for Doc2X V2 interface
+- The `pdf2file` interface will automatically recognise the input as a `folder path` / `file path` / `list form file path` and process it, [view](../guide/pdf.md)
+- `pdf2file` will automatically maintain the original file structure, no longer need to manually intervene, [View](../guide/pdf.md)
+- Improve the error reporting hints, now its going to try to provide a solution for the errors reported
+
+### 🚀 Other
+
+- Optimise package dependencies, now only two small packages are needed, `httpx` and `pypdf`.
+- Easier debug logging switches.
+
 ## V0.3.1
 
 > [!caution]
