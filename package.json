@@ -11,10 +11,14 @@
     "docs:update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.14",
-    "mermaid": "^10.9.1",
-    "vue": "^3.4.37",
-    "vuepress": "2.0.0-rc.14",
-    "vuepress-theme-hope": "2.0.0-rc.52"
+    "@vuepress/bundler-vite": "2.0.0-rc.18",
+    "mermaid": "^11.3.0",
+    "vue": "^3.5.12",
+    "vuepress": "2.0.0-rc.18",
+    "vuepress-theme-hope": "2.0.0-rc.58"
+  },
+  "dependencies": {
+    "@vuepress/plugin-markdown-hint": "2.0.0-rc.42",
+    "@vuepress/plugin-markdown-tab": "2.0.0-rc.47"
   }
 }

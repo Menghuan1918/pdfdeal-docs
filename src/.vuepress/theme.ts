@@ -74,21 +74,23 @@ export default hopeTheme({
       categoryId: "DIC_kwDOMUblpc4CgvRc",
     },
 
+
     components: {
       components: ["Badge", "VPCard"],
     },
-
+    markdownHint: {
+      alert: true,
+    },
+    markdownTab: {
+      tabs: true,
+      codeTabs: true,
+    },
     // All features are enabled for demo, only preserve features you need here
     mdEnhance: {
-      alert: true,
       align: true,
       attrs: true,
-      codetabs: true,
       component: true,
       demo: true,
-      figure: true,
-      imgLazyload: true,
-      imgSize: true,
       include: true,
       mark: true,
       plantuml: true,
@@ -108,7 +110,6 @@ export default hopeTheme({
       ],
       sub: true,
       sup: true,
-      tabs: true,
       tasklist: true,
       vPre: true,
 
