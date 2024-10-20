@@ -56,7 +56,7 @@ Output
 
 ## 示范代码
 
-### 使用 Doc2X PDF API 处理指定 PDF 文件
+### 处理指定 PDF 文件
 
 ```python
 from pdfdeal import Doc2X
@@ -91,7 +91,7 @@ False
 :::
 
 
-### 使用 Doc2X PDF API 处理指定文件夹中所有 PDF 文件
+### 处理指定文件夹中所有 PDF 文件
 
 ```python
 from pdfdeal import Doc2X
@@ -126,7 +126,7 @@ False
 ```
 :::
 
-### 使用 Doc2X PDF API 处理指定的 PDF 文件并指定导出的文件名
+### 处理指定的 PDF 文件并指定导出的文件名
 
 ```python
 from pdfdeal import Doc2X
