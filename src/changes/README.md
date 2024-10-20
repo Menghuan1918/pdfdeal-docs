@@ -2,6 +2,27 @@
 title: Update Log
 icon: wrench
 ---
+## V0.4.1
+> [!warning]
+> The V1 interface of Doc2X will soon be deprecated! Please migrate to the V2 interface as soon as possible. Check the [Interface Migration Guide](./v1tov2.md) to determine if any code changes are necessary.
+>
+> **In most cases, you will not need to change any code**, as the `0.4.X` version aims to maintain upward compatibility with the `0.3.1` version.
+
+### ✨ New Features
+
+- The `pdf2file` function has added an **experimental option** `retry`, which determines whether to retry failed conversions. It is disabled by default. This feature will be further improved in future versions, [🔍view](../guide/pdf.md).
+- When a single file path is provided, `pdf2file` will automatically retain the original file name, [🔍view](../guide/pdf.md).
+- Updated the CLI program to support the new V2 interface.
+
+### 🔧 Bug Fixes
+
+- Fixed the issue where custom export file names were not effective when a single file path was provided.
+- Fixed the issue where downloading converted files could hang in poor network conditions.
+
+### 🚀 Other
+
+- Support for Python 3.13, with related tests added in GitHub Action.
+- **Experimental** support for Python 3.13t (nogil).
 
 ## V0.4.0
 

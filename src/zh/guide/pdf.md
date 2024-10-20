@@ -18,7 +18,9 @@ order: 2
 | `output_path` | `str`               | 输出文件的目录路径。                                                 | 是       | `"./Output"` |
 | `output_format`| `str`              | 所需的输出格式。支持的文本格式包括：`md_dollar`,`md`,`tex`,`docx`，其成功返回值将是文件所在地址。支持的变量格式包括：`txt`,`txts`,`detailed`，其成功返回值将是：`md形式的字符串`，`list形式的按页分割的字符串`，`list形式的按页分割的字符串(包含详细页面信息)`   | 是       | `md_dollar`  |
 | `ocr`         | `bool`              | 是否使用OCR。                                                        | 是       | `True`       |
-| `convert`     | `bool`              | 是否将 `[` 转换为 `$`，`[[` 转换为 `$$`（仅在 `output_format` 为变量格式时有效）                         | 是       | `False`      |
+| `convert`     | `bool`              | 是否将 `[` 和 `[[` 转换为 `$` 和 `$$`，仅在 `output_format` 为变量格式时有效。 | 是       | `False`      |
+| `retry`       | `bool`              | **实验性选项**，将会在未来几个版本完善：是否重试失败的转换。开启后将会重试转换失败的文件。   | 是       | `False`      |
+
 
 ## 返回值
 返回一个包含以下内容的元组：
@@ -31,7 +33,7 @@ order: 2
 ### pdf_file参数
 `pdf_file`会自动识别输入是`文件夹路径`/`文件路径`/`列表形式的文件路径`并进行处理。
 
-当`pdf_file`输入为文件夹路径时，输出文件会自动保持原有文件结构。例如，将`/pdf`文件夹中文件转换为docx并储存到`/Output/newfolder`文件夹中：
+当`pdf_file`输入为文件夹或文件路径时，输出文件会自动保持原有文件结构。例如，将`/pdf`文件夹中文件转换为docx并储存到`/Output/newfolder`文件夹中：
 
 ::: tabs
 
@@ -53,6 +55,41 @@ Output
 :::
 
 ## 示范代码
+
+### 使用 Doc2X PDF API 处理指定 PDF 文件
+
+```python
+from pdfdeal import Doc2X
+
+client = Doc2X(apikey="Your API key",debug=True)
+success, failed, flag = client.pdf2file(
+    pdf_file="tests/pdf/sample.pdf",
+    output_path="./Output",
+    output_format="docx",
+)
+print(success)
+print(failed)
+print(flag)
+```
+
+::: tabs#code
+
+@tab 运行中日志输出
+```bash
+2024-10-20 15:14:37,801 - pdfdeal.doc2x - INFO - Uploading tests/pdf/sample.pdf...
+2024-10-20 15:14:41,059 - pdfdeal.doc2x - INFO - Conversion successful for tests/pdf/sample.pdf with uid 0192a8c7-2f21-71ef-a918-c3a42e290732
+2024-10-20 15:14:41,059 - pdfdeal.doc2x - INFO - Parsing 0192a8c7-2f21-71ef-a918-c3a42e290732 to docx...
+2024-10-20 15:14:43,770 - pdfdeal.doc2x - INFO - Downloading 0192a8c7-2f21-71ef-a918-c3a42e290732 docx file to ./Output...
+2024-10-20 15:14:45,841 - pdfdeal.doc2x - INFO - Successfully converted 1 file(s).
+```
+@tab success，failed，flag变量结果
+```python
+['./Output/sample.docx']
+[{'error': '', 'path': ''}]
+False
+```
+:::
+
 
 ### 使用 Doc2X PDF API 处理指定文件夹中所有 PDF 文件
 
@@ -99,7 +136,7 @@ success, failed, flag = client.pdf2file(
     pdf_file=["tests/pdf/sample.pdf"],
     #其等效于 pdf_file="tests/pdf/sample.pdf",
     output_path="./Output/test/single/pdf2file",
-    output_names=["sample1.zip"],
+    output_names=["ChangName.zip"],
     output_format="md_dollar",
 )
 print(success)
@@ -111,17 +148,15 @@ print(flag)
 
 @tab 运行中日志输出
 ```bash
-2024-10-18 22:52:41,808 - pdfdeal.doc2x - INFO - Uploading tests/pdf/sample.pdf...
-2024-10-18 22:52:43,838 - pdfdeal.doc2x - INFO - Processing 0192a01d-d4f5-7bcf-adb8-c0f9aa7e2b5d : 2%
-2024-10-18 22:52:45,889 - pdfdeal.doc2x - INFO - Conversion successful for tests/pdf/sample.pdf with uid 0192a01d-d4f5-7bcf-adb8-c0f9aa7e2b5d
-2024-10-18 22:52:45,889 - pdfdeal.doc2x - INFO - Parsing 0192a01d-d4f5-7bcf-adb8-c0f9aa7e2b5d to md_dollar...
-2024-10-18 22:52:48,791 - pdfdeal.doc2x - INFO - Downloading 0192a01d-d4f5-7bcf-adb8-c0f9aa7e2b5d md_dollar file to ./Output/test/single/pdf2file...
-2024-10-18 22:52:49,762 - pdfdeal.doc2x - INFO - Successfully converted 1 file(s).
-
+2024-10-20 15:15:46,608 - pdfdeal.doc2x - INFO - Uploading tests/pdf/sample.pdf...
+2024-10-20 15:15:52,128 - pdfdeal.doc2x - INFO - Conversion successful for tests/pdf/sample.pdf with uid 0192a8c8-3d01-794d-92a3-db1dd584b481
+2024-10-20 15:15:52,129 - pdfdeal.doc2x - INFO - Parsing 0192a8c8-3d01-794d-92a3-db1dd584b481 to md_dollar...
+2024-10-20 15:15:59,464 - pdfdeal.doc2x - INFO - Downloading 0192a8c8-3d01-794d-92a3-db1dd584b481 md_dollar file to ./Output/test/single/pdf2file...
+2024-10-20 15:16:02,079 - pdfdeal.doc2x - INFO - Successfully converted 1 file(s).
 ```
 @tab success，failed，flag变量结果
 ```python
-['./Output/test/single/pdf2file/sample1.zip']
+['./Output/test/single/pdf2file/ChangName.zip']
 [{'error': '', 'path': ''}]
 False
 ```
