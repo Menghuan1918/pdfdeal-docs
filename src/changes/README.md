@@ -2,6 +2,20 @@
 title: Update Log
 icon: wrench
 ---
+## V0.4.3
+> [!note]
+> The V1 interface of Doc2X will soon be deprecated! Please migrate to the V2 interface as soon as possible. Check the [Interface Migration Guide](./v1tov2.md) to determine if any code changes are necessary.
+>
+> **In most cases, you will not need to change any code**, as the `0.4.X` version aims to maintain upward compatibility with the `0.3.1` version.
+
+### 🔧 Bug Fixes
+- Fixed a potential deadlock issue
+- Significantly improved concurrency performance
+
+### 🚀 Other
+- Synchronized new error codes for Doc2X
+- Improved package dependencies
+
 ## V0.4.2
 > [!warning]
 > The V1 interface of Doc2X will soon be deprecated! Please migrate to the V2 interface as soon as possible. Check the [Interface Migration Guide](./v1tov2.md) to determine if any code changes are necessary.
