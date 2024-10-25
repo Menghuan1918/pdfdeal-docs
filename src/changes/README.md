@@ -2,6 +2,10 @@
 title: Update Log
 icon: wrench
 ---
+## V0.4.5
+### 🔧 Bug Fixes
+- Fixed the issue where the error for exceeding the page limit could not be handled
+
 ## V0.4.4
 
 ### 🔧 Bug Fixes
