@@ -2,6 +2,11 @@
 title: Update Log
 icon: wrench
 ---
+## V0.4.4
+
+### 🔧 Bug Fixes
+- Fixed the issue of too small request intervals
+
 ## V0.4.3
 > [!note]
 > The V1 interface of Doc2X will soon be deprecated! Please migrate to the V2 interface as soon as possible. Check the [Interface Migration Guide](./v1tov2.md) to determine if any code changes are necessary.
