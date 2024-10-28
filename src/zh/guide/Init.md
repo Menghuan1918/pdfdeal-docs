@@ -18,9 +18,14 @@ order: 1
 | `apikey`   | str   | None   | Doc2X 的 API 密钥。如果未提供，将尝试从环境变量 `DOC2X_APIKEY` 中获取。|
 | `thread`   | int   | 5      | 最大并发线程数。除非您确信您需要修改，请使用默认值。                                                     |
 | `max_pages`| int   | 1000   | 处理的最大页数。除非您确信您需要修改，请使用默认值。                                                     |
-| `retry_time`| int  | 15     | 最高重试次数。除非您确信您需要修改，请使用默认值。                                                           |
-| `max_time` | int   | 90     | 等待响应的最大时间（以秒为单位）。除非您确信您需要修改，请使用默认值。                                   |
+| `retry_time`| int  | 5     | 最高重试次数。除非您确信您需要修改，请使用默认值。                                                           |
+| `max_time` | int   | 90     | 等待响应的最大时间（以秒为单位）。如您网速过慢可适当调高此值。                                  |
 | `debug`    | bool  | False  | 是否启用调试日志记录。                                               |
+| `full_speed` | bool | False | **beta功能**，其会自动嗅探并发上限，试探当前可用的最高并发上限，由于该功能可能会导致频繁触发访问上限导致请求停滞缓慢, 请谨慎使用。| 
+
+#### Beta功能说明
+
+**full_speed**：当设置为`True`时，该功能会自动检测并维持在当前可用的最高并发上限。它会根据服务器的响应动态调整并发数量，但不会低于`thread`参数指定的值。启用`full_speed`后，由于其通过触发服务器速率限制警告来进行嗅探，因此会忽略`retry_time`和`max_time`的设置，强制将其分别设为`10`和`180`。
 
 #### 异常
 
@@ -75,6 +80,7 @@ DOC2X_APIKEY = "Your API Key"
 
 ```python
 from pdfdeal import Doc2X
+
 client = Doc2X(apikey="Your API key")
 ```
 
@@ -99,4 +105,14 @@ client = Doc2X(max_pages=100, thread=2)
 from pdfdeal import Doc2X
 
 client = Doc2X(debug=True)
+```
+### 启用full_speed模式
+
+> [!warning]
+> 此功能仍处于beta状态，请谨慎使用。
+
+```python
+from pdfdeal import Doc2X
+
+client = Doc2X(debug=True, thread=5, full_speed=True)
 ```

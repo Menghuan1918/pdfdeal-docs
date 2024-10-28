@@ -1,5 +1,5 @@
 ---
-title:  V1接口
+title:  V1接口(已弃用)
 icon: lightbulb
 ---
 

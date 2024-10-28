@@ -2,6 +2,17 @@
 title: Update Log
 icon: wrench
 ---
+## V0.4.6
+### ✨ New Features
+- Introduced the `full_speed` **beta feature**, which automatically detects the highest available concurrency limit.
+
+### 🔧 Bug Fixes
+- Corrected spelling errors in function comments.
+
+### 🚀 Other
+- More detailed error descriptions are now provided, with `trace-id` included whenever possible to facilitate problem localization.
+- The experimental `retry` option has been removed due to not meeting expected results.
+
 ## V0.4.5
 ### 🔧 Bug Fixes
 - Fixed the issue where the error for exceeding the page limit could not be handled
