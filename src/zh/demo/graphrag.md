@@ -48,7 +48,7 @@ mkdir -p ./ragtest/input
 使用`pdfdeal`的CLI工具`doc2x`进行批处理，请加上长标示`--graphrag`以启用对graphrag的特殊适配：
 
 ```bash
-doc2x -k "Your Key Here" -o ./ragtest/input -p --graphrag ./pdf
+doc2x -k "Your Key Here" -o ./ragtest/input --graphrag ./pdf
 ```
 
 ![](../../images/demo/graphrag/doc2x.png)
@@ -81,7 +81,7 @@ python -m graphrag.index --root ./ragtest
 python -m graphrag.query \
 --root ./ragtest \
 --method global \
-"Q"
+"问题"
 ```
 
 @tab local
@@ -90,7 +90,7 @@ python -m graphrag.query \
 python -m graphrag.query \
 --root ./ragtest \
 --method local \
-"Q"
+"问题"
 ```
 
 :::

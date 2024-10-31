@@ -4,6 +4,9 @@ icon: file-pdf
 order: 2
 ---
 
+> [!info]
+> 如您想要完全自己掌控处理PDF文件的过程(例如集成在您的GUI软件中)，您可以参见[异步实现](./async.md)
+
 ## 转换PDF
 
 ## 描述

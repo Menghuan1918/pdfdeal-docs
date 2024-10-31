@@ -8,6 +8,9 @@ order: 1
 
 请登录[Doc2X 开放平台](https://open.noedgeai.com)获取 API 密匙。
 
+> [!info]
+> 如您想要完全自己掌控处理PDF文件的过程(例如集成在您的GUI软件中)，您可以参见[异步实现](./async.md)
+
 ## 描述
 `Doc2X` 类的初始化方法用于创建一个 Doc2X 客户端实例。该实例用于处理 PDF 文件的转换操作。
 

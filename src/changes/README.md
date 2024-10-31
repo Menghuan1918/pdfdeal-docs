@@ -2,6 +2,17 @@
 title: Update Log
 icon: wrench
 ---
+## V0.4.7
+### ✨ New Features
+- Enabled HTTP/2 support for all requests, which theoretically can improve file transfer performance
+
+### 🔧 Bug Fixes
+- Fixed a bug where the image replacement tool `mds_replace_imgs` was not functioning
+
+### 🚀 Other
+- Reintroduced Ruff in GitHub Actions for code checking and formatting verification
+- Added prompts for API key authentication failures
+
 ## V0.4.6
 ### ✨ New Features
 - Introduced the `full_speed` **beta feature**, which automatically detects the highest available concurrency limit.

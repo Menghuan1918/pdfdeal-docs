@@ -48,7 +48,7 @@ Go to [Doc2X](https://doc2x.com/), click on identity information, and copy your 
 Use `pdfdeal`'s CLI tool `doc2x` for batch processing, please add the long flag `--graphrag` to enable special adaptation for graphrag:
 
 ```bash
-doc2x -k "Your Key Here" -o ./ragtest/input -p --graphrag ./pdf
+doc2x -k "Your Key Here" -o ./ragtest/input --graphrag ./pdf
 ```
 
 ![](../images/demo/graphrag/doc2x.png)

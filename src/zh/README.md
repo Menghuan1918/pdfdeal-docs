@@ -21,13 +21,18 @@ actions:
 features:
   - title: 快速开始
     icon: clipboard-check
-    details: 使用命令行工具`doc2x`快速批量使用Doc2X API转换PDF或图片
+    details: 使用命令行工具`doc2x`快速批量使用Doc2X API转换PDF
     link: https://menghuan1918.github.io/pdfdeal-docs/zh/guide/CLI/
     
-  - title: RAG增强
+  - title: PDF转换(同步)
     icon: tachometer-alt
-    details: 利用Doc2X增强RAG效果
-    link: https://menghuan1918.github.io/pdfdeal-docs/zh/guide/Doc2X/3.html
+    details: 【推荐】开始使用Doc2X进行文件转换(同步封装)
+    link: https://menghuan1918.github.io/pdfdeal-docs/zh/guide/Init.html
+
+  - title: PDF转换(异步)
+    icon: rotate
+    details: 开始使用Doc2X进行文件转换(异步接口)
+    link: https://menghuan1918.github.io/pdfdeal-docs/zh/guide/async.html
 
 # highlights:
 #   - header: 易于安装

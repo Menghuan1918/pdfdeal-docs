@@ -56,7 +56,7 @@ pip install --upgrade "pdfdeal[rag]"
 from pdfdeal.file_tools import md_replace_imgs
 md_replace_imgs(
     mdfile="Output/1706.03762-2024-08-11 17-06-35.md",
-    outputpath="./ABC"
+    outputpath="./ABC"，
     replace="local",
     threads=5,
 )
