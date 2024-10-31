@@ -8,6 +8,8 @@ icon: wrench
 
 ### 🔧 Bug Fixes
 - Fixed a bug where the image replacement tool `mds_replace_imgs` was not functioning
+- Fixed a potential deadlock issue when `full_speed` is enabled
+
 
 ### 🚀 Other
 - Reintroduced Ruff in GitHub Actions for code checking and formatting verification

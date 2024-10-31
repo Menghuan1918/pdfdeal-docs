@@ -8,6 +8,7 @@ icon: wrench
 
 ### 🔧 BUG修复
 - 修复图片替换工具`mds_replace_imgs`无法使用的bug
+- 修复`full_speed`启用时可能会导致死锁的问题
 
 ### 🚀 其他
 - 重新在 GitHub Action 中引入 Ruff 进行代码检查以及代码格式化检查
