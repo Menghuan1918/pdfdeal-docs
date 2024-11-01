@@ -2,6 +2,13 @@
 title: Update Log
 icon: wrench
 ---
+## V0.4.8b1
+⚠️ This is a beta version, which may contain instabilities and potential issues. It is recommended to use it cautiously in production environments. To install this version, use the following command: `pip install pdfdeal==0.4.8b1`
+
+### ✨ New Features
+- Added a new option `oss_choose` to the PDF conversion function, which supports Doc2X's new interface for uploading files via OSS. This offers a significant speed improvement compared to direct uploads. The default is `always` (all files are uploaded via OSS). [🔍View synchronous interface documentation](../guide/pdf.md#parameters), [📦View asynchronous interface documentation](../guide/async.md#upload-files-and-get-file-uid)
+
+
 ## V0.4.7
 ### ✨ New Features
 - Enabled HTTP/2 support for all requests, which theoretically can improve file transfer performance

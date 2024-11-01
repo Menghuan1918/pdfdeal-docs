@@ -16,12 +16,13 @@ order: 2
 
 | 参数名        | 类型                | 描述                                                                 | 是否可选 | 默认值       |
 |---------------|---------------------|----------------------------------------------------------------------|----------|--------------|
-| `pdf_file`    | `List[str]`或`str`   |  单个PDF文件的路径，或PDF所在文件夹路径，或列表形式的PDF文件路径。                               | 否       | N/A          |
+| `pdf_file`    | `str`或`List[str]`  | 单个PDF文件的路径或PDF文件路径的列表。                               | 否       | N/A          |
 | `output_names`| `List[str]`         | 输出文件名的列表。一般而言不需要使用。                                                   | 是       | `None`       |
 | `output_path` | `str`               | 输出文件的目录路径。                                                 | 是       | `"./Output"` |
-| `output_format`| `str`              | 所需的输出格式。支持的文本格式包括：`md_dollar`,`md`,`tex`,`docx`，其成功返回值将是文件所在地址。支持的变量格式包括：`text`,`texts`,`detailed`，其成功返回值将是：`md形式的字符串`，`list形式的按页分割的字符串`，`list形式的按页分割的字符串(包含详细页面信息)`   | 是       | `md_dollar`  |
+| `output_format`| `str`              | 所需的输出格式。支持的文本格式包括：`md_dollar`、`md`、`tex`、`docx`，其成功返回值将是文件所在地址。支持的变量格式包括：`text`、`texts`、`detailed`，其成功返回值将是：`md形式的字符串`，`list形式的按页分割的字符串`，`list形式的按页分割的字符串(包含详细页面信息)`   | 是       | `md_dollar`  |
 | `ocr`         | `bool`              | 是否使用OCR。                                                        | 是       | `True`       |
-| `convert`     | `bool`              | 是否将 `[` 和 `[[` 转换为 `$` 和 `$$`，仅在 `output_format` 为变量格式时有效。 | 是       | `False`      |
+| `convert`     | `bool`              | 是否将 `[` 和 `[[` 转换为 `$` 和 `$$`，仅在 `output_format` 为变量格式(`text`、`texts`、`detailed`)时有效。 | 是       | `False`      |
+| `oss_choose`  | `str`               | 现在可以通过API直接上传文件或通过API提供的OSS链接上传文件。可接受的值：`auto`、`always`、`never`（即`仅>=100MB的文件将上传到OSS`，`所有文件都将上传到OSS`，`所有文件都将直接上传`）。 | 是==仅在`0.4.8b1`或更高版本可用==       | `"always"`   |
 
 ## 返回值
 返回一个包含以下内容的元组：
