@@ -2,6 +2,15 @@
 title: Update Log
 icon: wrench
 ---
+
+## V0.4.8b2
+⚠️ This is a beta version, which may contain instabilities and potential issues. It is recommended to use it cautiously in production environments. To install this version, use the following command: `pip install pdfdeal==0.4.8b2`
+
+### 🚀 Other
+- Deprecated the `ocr` option as the upstream API no longer provides an `ocr` toggle option (it is now forced on by default).
+- Adapted to new error codes.
+
+
 ## V0.4.8b1
 ⚠️ This is a beta version, which may contain instabilities and potential issues. It is recommended to use it cautiously in production environments. To install this version, use the following command: `pip install pdfdeal==0.4.8b1`
 
