@@ -2,6 +2,15 @@
 title: Update Log
 icon: wrench
 ---
+## V0.4.8b3
+⚠️ This is a beta version, which may contain instabilities and potential issues. It is recommended to use it cautiously in production environments. To install this version, use the following command: `pip install pdfdeal==0.4.8b3`
+
+### ✨ New Features
+- Added the ability to output multiple formats (without consuming additional credits). Note that due to export interface rate limitations, this will significantly extend conversion time. [🔍View details](../guide/pdf.md#output-multiple-formats)
+
+### 🚀 Other
+- More detailed network error detection
+
 
 ## V0.4.8b2
 ⚠️ This is a beta version, which may contain instabilities and potential issues. It is recommended to use it cautiously in production environments. To install this version, use the following command: `pip install pdfdeal==0.4.8b2`
