@@ -2,6 +2,16 @@
 title: Update Log
 icon: wrench
 ---
+## V0.4.8
+### ✨ New Features
+- Added a new `oss_choose` option to the PDF conversion function, supporting Doc2X's new interface for uploading files via OSS, significantly improving upload speed. The default value is `always` (all files are uploaded via OSS). [🔍View synchronous interface documentation](../guide/pdf.md#parameters), [📦View asynchronous interface documentation](../guide/async.md#upload-files-and-get-file-uid)
+- Introduced the ability to output multiple formats simultaneously (without consuming additional credits). Note that due to export interface rate limitations, enabling this feature will slightly extend conversion time. [🔍View details](../guide/pdf.md#output-multiple-formats)
+
+### 🚀 Other
+- More detailed network error detection
+- Deprecated the `ocr` option as the upstream API no longer provides an `ocr` toggle option (it is now forced on by default).
+- Adapted to new error codes
+
 ## V0.4.8b3
 ⚠️ This is a beta version, which may contain instabilities and potential issues. It is recommended to use it cautiously in production environments. To install this version, use the following command: `pip install pdfdeal==0.4.8b3`
 
