@@ -2,6 +2,13 @@
 title: 更新日志
 icon: wrench
 ---
+## V0.4.9
+### ✨ 新功能
+- 我们引入了新的内置上传工具：MinIO。您可以轻松地将Markdown文档中的图片（无论是在线链接还是本地链接）上传到MinIO，并使用MinIO生成的图片链接进行替换。[🔍查看使用示例](../guide/Tools/Upload.md#minio) by [@Huxb12138](https://github.com/Huxb12138) in [#51](https://github.com/Menghuan1918/pdfdeal/pull/51)
+
+### 🚀 其他
+- 新增一些[示范代码](https://github.com/Menghuan1918/pdfdeal/tree/main/examples)
+
 ## V0.4.8
 ### ✨ 新功能
 - PDF转换函数新增`oss_choose`选项，支持Doc2X通过OSS上传文件的新接口，显著提升上传速度，同时支持上传的文件体积增大到1G。默认值为`always`（所有文件均通过OSS上传）。[🔍查看同步接口文档](../guide/pdf.md#参数)，[📦查看异步接口文档](../guide/async.md#上传文件并获得文件uid)

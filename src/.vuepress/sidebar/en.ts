@@ -21,7 +21,6 @@ export const enSidebar = sidebar({
       text: "Changelog",
       icon: "wrench",
       link: "changes/",
-      children: "structure",
     }
     // {
     //   text: "Slides",

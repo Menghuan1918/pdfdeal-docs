@@ -66,7 +66,7 @@ from pdfdeal.FileTools.Img.Ali_OSS import Ali_OSS
 - Bucket：您的 OSS Bucket 名称
 
 > [!warning]
-> 首先您需要安装包`oss2`进行使用：`pip install -U oss2`
+> 首先您需要安装包`oss2`进行使用：`pip install -U oss2`或`pip install --upgrade "pdfdeal[rag]"`
 >
 > 请确保您的 OSS 已经将权限设置为公开可读
 
@@ -115,7 +115,7 @@ from pdfdeal.FileTools.Img.S3 import S3
 - Customized_Domain：您的S3自定义域名，注意`{Customized_Domain}/{remote_file_path}`将作为最终的图片地址返回。请不要忘记为自定义域名添加`http://`或`https://`前缀。
 
 > [!warning]
-> 首先您需要安装包`boto3`进行使用：`pip install -U boto3`
+> 首先您需要安装包`boto3`进行使用：`pip install -U boto3`或`pip install --upgrade "pdfdeal[rag]"`
 >
 > 请确保您的 S3 已经将权限设置为公开可读
 
@@ -147,8 +147,54 @@ md_replace_imgs(
 # )
 ```
 
+## MinIO
+
+要使用此工具，您需要确保版本为 ==`0.4.9`== 或更高。
+
+您可以通过 Docker 部署开源的 MinIO 对象存储服务器。此工具同样支持通过 HTTPS 反向代理访问 MinIO 地址。
+
+如果指定的桶（bucket_name）尚未创建，工具将**自动**创建一个公开可读的桶用于存储图片；如果桶已存在，则直接使用该桶。
+
+请首先导入函数并使用您的MinIO地址，管理员账户，密码进行初始化。
+
+```python
+from pdfdeal.FileTools.Img.MinIO import Min
+```
+
+`Min`函数初始化时需要以下参数：
+- minio_address：指定MinIO服务器地址，支持`HTTPS`、`HTTP`或`IP`格式，例如`https://download.xxxx.top`或`127.0.0.1:9000`。若为本地部署，通常为`127.0.0.1:9000`。
+- minio_admin：MinIO服务器的管理员账户。
+- minio_password：MinIO服务器的管理员账户密码。
+- bucket_name：指定存储的桶名称。请确保该桶为公开可读状态；若桶尚未创建，工具将自动创建一个公开可读的桶用于存储图片。
+
+```python
+from pdfdeal.FileTools.Img.MinIO import Min
+from pdfdeal.file_tools import md_replace_imgs
+
+miupload = Min(
+    minio_address = os.environ.get("MINIO_ADDRESS"),
+    minio_admin = os.environ.get("MINIO_ADMIN"),
+    minio_password = os.environ.get("MINIO_PASSWORD"),
+    bucket_name = os.environ.get("BUCKET_NAME")
+)
+md_replace_imgs(
+    mdfile="Output/1706.03762-2024-08-11 17-06-35.md",
+    replace=miupload,
+    threads=5,
+)
+
+# 或者您希望替换指定路径中所有MD文档的图片为S3地址
+# mds_replace_imgs(
+#     path="Output",
+#     replace=miupload,
+#     threads=5,
+# )
+```
+
 ## 更多...
 
 正在赶来的路上~
 
 如您想提交一个关于文件上传的 PR，请首先 fork[项目](https://github.com/Menghuan1918/pdfdeal)，随后在项目的`src/pdfdeal/FileTools/Img`文件夹中新建`.py`文件，您可以仿照文件夹中其他上出实现完成您的上传操作，最后发起 PR🥳
+
+感谢[@Huxb12138](https://github.com/Huxb12138)贡献的MinIO上传工具

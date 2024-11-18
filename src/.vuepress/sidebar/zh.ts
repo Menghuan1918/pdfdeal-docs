@@ -21,7 +21,6 @@ export const zhSidebar = sidebar({
       text: "更新日志",
       icon: "wrench",
       link: "changes/",
-      children: "structure",
     },
     // {
     //   text: "幻灯片",
