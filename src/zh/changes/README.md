@@ -4,7 +4,7 @@ icon: wrench
 ---
 ## V0.4.9
 ### ✨ 新功能
-- 我们引入了新的内置上传工具：MinIO。您可以轻松地将Markdown文档中的图片（无论是在线链接还是本地链接）上传到MinIO，并使用MinIO生成的图片链接进行替换。[🔍查看使用示例](../guide/Tools/Upload.md#minio) by [@Huxb12138](https://github.com/Huxb12138) in [#51](https://github.com/Menghuan1918/pdfdeal/pull/51)
+- 新增内置上传工具：MinIO。您可以轻松地将Markdown文档中的图片（无论是在线链接还是本地链接）上传到MinIO，并使用MinIO生成的图片链接进行替换。[🔍查看使用示例](../guide/Tools/Upload.md#minio) by [@Huxb12138](https://github.com/Huxb12138) in [#51](https://github.com/Menghuan1918/pdfdeal/pull/51)
 
 ### 🚀 其他
 - 新增一些[示范代码](https://github.com/Menghuan1918/pdfdeal/tree/main/examples)
