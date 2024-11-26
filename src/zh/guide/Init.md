@@ -24,9 +24,9 @@ order: 1
 | `retry_time`| int  | 5     | 最高重试次数。除非您确信您需要修改，请使用默认值。                                                           |
 | `max_time` | int   | 90     | 等待响应的最大时间（以秒为单位）。如您网速过慢可适当调高此值。                                  |
 | `debug`    | bool  | False  | 是否启用调试日志记录。                                               |
-| `full_speed` | bool | False | **beta功能**，其会自动嗅探并发上限，试探当前可用的最高并发上限，由于该功能可能会导致频繁触发访问上限导致请求停滞缓慢, 请谨慎使用。| 
+| `full_speed`<Badge text="需要0.4.6+版本" type="warning" /> | bool | False | **beta功能**，其会自动嗅探并发上限，试探当前可用的最高并发上限，由于该功能可能会导致频繁触发访问上限导致请求停滞缓慢, 请谨慎使用。| 
 
-#### Beta功能说明
+#### Beta功能说明<Badge text="需要0.4.6+版本" type="warning" />
 
 **full_speed**：当设置为`True`时，该功能会自动检测并维持在当前可用的最高并发上限。它会根据服务器的响应动态调整并发数量，但不会低于`thread`参数指定的值。启用`full_speed`后，由于其通过触发服务器速率限制警告来进行嗅探，因此会忽略`retry_time`和`max_time`的设置，强制将其分别设为`10`和`180`。
 
@@ -109,7 +109,7 @@ from pdfdeal import Doc2X
 
 client = Doc2X(debug=True)
 ```
-### 启用full_speed模式
+### 启用full_speed模式<Badge text="需要0.2.4+版本" type="warning" />
 
 > [!warning]
 > 此功能仍处于beta状态，请谨慎使用。

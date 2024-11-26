@@ -13,7 +13,7 @@ export default hopeTheme({
   iconAssets: "fontawesome-with-brands",
 
   logo: "/favicon.ico",
-
+  favicon: "/favicon.ico",
   repo: "Menghuan1918/pdfdeal-docs",
 
   docsDir: "src",

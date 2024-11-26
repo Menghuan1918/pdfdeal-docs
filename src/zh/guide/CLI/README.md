@@ -3,7 +3,7 @@ title: 命令行工具
 icon: code
 ---
 
-## `doc2x` 命令使用说明
+## `doc2x` 命令使用说明<Badge text="需要0.4.2+版本" type="warning" />
 
 `doc2x` 命令用于批量处理 PDF 或图片文件，将其转换为多种输出格式。
 

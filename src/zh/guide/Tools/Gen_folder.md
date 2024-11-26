@@ -5,7 +5,7 @@ icon: folder-tree
 您可能需要安装一些额外依赖以使用：
 
 ```bash
-pip install --upgrade "pdfdeal[rag]"
+pip install --upgrade "pdfdeal[tools]"
 ```
 
 目录：

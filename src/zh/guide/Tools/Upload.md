@@ -1,5 +1,5 @@
 ---
-title: 内置上传工具
+title: 内置上传工具 
 icon: upload
 ---
 您可能需要安装一些额外依赖以使用：
@@ -8,19 +8,19 @@ icon: upload
 pip install --upgrade "pdfdeal[rag]"
 ```
 
-此工具需要您使用 ==0.2.4== 或更高版本。
-
 `pdfdeal`内置了一些常见的储存服务的上传工具，当然您也可以自行编写一个上传的函数--这也非常简单。
 
 您需要与[文档图像处理工具](./MD_imgs.md)结合使用。
 
 目前支持：
 
-- [自定义函数](#自定义函数)
-- [阿里 OSS](#阿里云-oss)
-- [S3 对象储存](#s3)
+- [自定义函数](#自定义函数)<Badge text="需要0.2.4+版本" type="warning" />
+- [阿里 OSS](#阿里云-oss)<Badge text="需要0.2.4+版本" type="warning" />
+- [S3 对象储存](#s3)<Badge text="需要0.2.5+版本" type="warning" />
+- [MiniO](#minio)<Badge text="需要0.4.9+版本" type="warning" />
+- [PicGo](#picgo)<Badge text="需要0.4.10+版本" type="warning" />
 
-## 自定义函数
+## 自定义函数<Badge text="需要0.2.4+版本" type="warning" />
 
 请定义一个入参接受为：
 
@@ -50,7 +50,7 @@ def upload_file(local_file_path, remote_file_path):
 
 如果您有好的新文件上传实现，欢迎[提交 PR！](#更多)
 
-## 阿里云 OSS
+## 阿里云 OSS<Badge text="需要0.2.4+版本" type="warning" />
 
 请首先导入函数并使用您的阿里云 ACCESS_KEY 进行初始化。
 
@@ -99,7 +99,7 @@ md_replace_imgs(
 # )
 ```
 
-## S3
+## S3<Badge text="需要0.2.5+版本" type="warning" />
 
 请首先导入函数并使用您的S3验证密匙进行初始化。
 
@@ -147,9 +147,7 @@ md_replace_imgs(
 # )
 ```
 
-## MinIO
-
-要使用此工具，您需要确保版本为 ==`0.4.9`== 或更高。
+## MinIO<Badge text="需要0.4.9+版本" type="warning" />
 
 您可以通过 Docker 部署开源的 MinIO 对象存储服务器。此工具同样支持通过 HTTPS 反向代理访问 MinIO 地址。
 
@@ -187,6 +185,30 @@ md_replace_imgs(
 # mds_replace_imgs(
 #     path="Output",
 #     replace=miupload,
+#     threads=5,
+# )
+```
+
+## PicGO<Badge text="需要0.4.10+版本" type="warning" />
+
+您可以通过[PicGo](https://github.com/Molunerfinn/PicGo)上传文件，您需要自行在PicGo中设置要上传的图床。将会使用PicGo中的默认图床进行上传。注意使用PicGO上传时，其上传路径格式由PicGO决定。
+
+```python
+from pdfdeal.FileTools.Img.PicGO import PicGO
+from pdfdeal.file_tools import md_replace_imgs
+
+picgo = PicGO(endpoint="http://127.0.0.1:36677")
+
+md_replace_imgs(
+    mdfile="Output/111.md",
+    replace=picgo,
+    threads=5,
+)
+
+# 或者您希望替换指定路径中所有MD文档的图片为S3地址
+# mds_replace_imgs(
+#     path="Output",
+#     replace=picgo,
 #     threads=5,
 # )
 ```

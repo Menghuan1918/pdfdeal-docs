@@ -2,6 +2,16 @@
 title: 更新日志
 icon: wrench
 ---
+## V0.4.10
+### ✨ 新功能
+- 新增内置上传工具：[PicGo](https://github.com/Molunerfinn/PicGo)。现在支持将 Markdown 文档中的本地或在线图片，通过PicGo上传到图床。[🔍查看使用示例](../guide/Tools/Upload.md#picgo)
+- 上传MD图片到图床现在支持使用路径格式(以`/{PDF名字}/{图片的md5}.{拓展名}`形式上传) [#53](https://github.com/Menghuan1918/pdfdeal/issues/53)
+- 新增HTML表格转换为Markdown格式的文件处理工具。 [🔍查看使用示例](../guide/Tools/Html2MD.md)
+
+### 🚀 其他
+- 改进需要安装的依赖
+- 改进文档中对版本需求的提示
+
 ## V0.4.9
 ### ✨ 新功能
 - 新增内置上传工具：MinIO。您可以轻松地将Markdown文档中的图片（无论是在线链接还是本地链接）上传到MinIO，并使用MinIO生成的图片链接进行替换。[🔍查看使用示例](../guide/Tools/Upload.md#minio) by [@Huxb12138](https://github.com/Huxb12138) in [#51](https://github.com/Menghuan1918/pdfdeal/pull/51)

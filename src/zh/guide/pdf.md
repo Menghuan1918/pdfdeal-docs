@@ -19,14 +19,13 @@ order: 2
 | `pdf_file`    | `str`或`List[str]`  | 单个PDF文件的路径或PDF文件路径的列表。                               | 否       | N/A          |
 | `output_names`| `List[str]`         | 输出文件名的列表。一般而言不需要使用。                                                   | 是       | `None`       |
 | `output_path` | `str`               | 输出文件的目录路径。                                                 | 是       | `"./Output"` |
-| `output_format`| `str`              | 所需的输出格式。支持的文本格式包括：`md_dollar`、`md`、`tex`、`docx`，其成功返回值将是文件所在地址。支持的变量格式包括：`text`、`texts`、`detailed`，其成功返回值将是：`md形式的字符串`，`list形式的按页分割的字符串`，`list形式的按页分割的字符串(包含详细页面信息)`，其也支持同时输出多种格式(==仅在`0.4.8b3`或更高版本可用==)，详细参见下方说明。   | 是       | `md_dollar`  |
+| `output_format`| `str`              | 所需的输出格式。支持的文本格式包括：`md_dollar`、`md`、`tex`、`docx`，其成功返回值将是文件所在地址。支持的变量格式包括：`text`、`texts`、`detailed`，其成功返回值将是：`md形式的字符串`，`list形式的按页分割的字符串`，`list形式的按页分割的字符串(包含详细页面信息)`，其也支持同时输出多种格式<Badge text="需要0.4.8b3+版本" type="warning" />，详细参见下方说明。   | 是       | `md_dollar`  |
 | `ocr`         | `bool`              | 是否使用OCR。                                                        | 是       | `True`       |
 | `convert`     | `bool`              | 是否将 `[` 和 `[[` 转换为 `$` 和 `$$`，仅在 `output_format` 为变量格式(`text`、`texts`、`detailed`)时有效。 | 是       | `False`      |
-| `oss_choose`  | `str`               | 现在可以通过API直接上传文件或通过API提供的OSS链接上传文件。可接受的值：`auto`、`always`、`never`（即`仅>=100MB的文件将上传到OSS`，`所有文件都将上传到OSS`，`所有文件都将直接上传`）。 | 是 ==仅在`0.4.8b1`或更高版本可用==       | `"always"`   |
+| `oss_choose`<Badge text="需要0.4.8b1+版本" type="warning" />  | `str`               | 现在可以通过API直接上传文件或通过API提供的OSS链接上传文件。可接受的值：`auto`、`always`、`never`（即`仅>=100MB的文件将上传到OSS`，`所有文件都将上传到OSS`，`所有文件都将直接上传`）。 | 是      | `"always"`   |
 
-### 输出多种格式
+### 输出多种格式<Badge text="需要0.4.8b3+版本" type="warning" />
 
-==仅在`0.4.8b3`或更高版本可用==
 
 您可以直接使用类csv格式传入多种格式：
 
@@ -146,7 +145,7 @@ False
 ```
 :::
 
-### 处理指定文件夹中所有 PDF 文件-导出为多种格式
+### 处理指定文件夹中所有 PDF 文件-导出为多种格式<Badge text="需要0.4.8b3+版本" type="warning" />
 
 ```python
 from pdfdeal import Doc2X
@@ -250,7 +249,7 @@ False
 ```
 :::
 
-### 处理指定的 PDF 文件并指定导出的文件名-导出为多种格式
+### 处理指定的 PDF 文件并指定导出的文件名-导出为多种格式<Badge text="需要0.4.8b3+版本" type="warning" />
 
 ```python
 from pdfdeal import Doc2X
@@ -346,7 +345,7 @@ True
 ```
 :::
 
-### 报错信息示范-导出为多种格式-导出部分出错
+### 报错信息示范-导出为多种格式-导出部分出错<Badge text="需要0.4.8b3+版本" type="warning" />
 
 以下代码运行过程中，在完成前两者的转换后主动断开了网络链接以模拟转换`md`失败的场景：
 
@@ -398,7 +397,7 @@ True
 ```
 :::
 
-### 报错信息示范-导出为多种格式-解析部分出错
+### 报错信息示范-导出为多种格式-解析部分出错<Badge text="需要0.4.8b3+版本" type="warning" />
 
 以下代码中使用的`tests/pdf/sample_bad.pdf`文件是一个无法打开的损坏的PDF文件：
 

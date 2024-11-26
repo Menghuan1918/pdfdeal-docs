@@ -5,7 +5,7 @@ icon: scissors
 您可能需要安装一些额外依赖以使用：
 
 ```bash
-pip install --upgrade "pdfdeal[rag]"
+pip install --upgrade "pdfdeal[tools]"
 ```
 
 这个工具将会尝试按照标题对 MD 文档进行拆分，并为其添加分段标识符，以方便与其他 RAG 工具(例如fastgpt，Dify等)结合使用。
@@ -15,7 +15,7 @@ pip install --upgrade "pdfdeal[rag]"
 - [处理单个 MD 文档](#auto-split-md)
 - [处理某个目录中的 MD 文档](#auto-split-mds)
 
-## auto_split_md
+## auto_split_md<Badge text="需要0.2.4+版本" type="warning" />
 
 自动分割 Markdown 文件。
 
@@ -41,7 +41,7 @@ pip install --upgrade "pdfdeal[rag]"
 - 目前仅支持按标题分割
 - 输出方式为`multi`时，将会按段输出多个文件，其会以`源文件名+分段标题.md`命名，且此时返回的是文件夹路径
 
-## auto_split_mds
+## `auto_split_mds`<Badge text="需要0.2.4+版本" type="warning" />
 
 将文件夹中的 Markdown 文件进行分割。
 

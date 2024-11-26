@@ -18,10 +18,10 @@ pip install --upgrade "pdfdeal[rag]"
 > 这个工具将会替换源文件中的内容，请注意您的文件数据备份
 
 目录：
-- [处理单个MD文档](#md-replace-imgs)
-- [处理某个目录中的MD文档](#mds-replace-imgs)
+- [处理单个MD文档](#md-replace-imgs)<Badge text="需要0.2.4+版本" type="warning" />
+- [处理某个目录中的MD文档](#mds-replace-imgs)<Badge text="需要0.2.4+版本" type="warning" />
 
-## `md_replace_imgs`
+## `md_replace_imgs`<Badge text="需要0.2.4+版本" type="warning" />
 
 替换单个 Markdown 文件中的图片链接（CDN 链接 -> 本地文件/阿里OSS/自定义）。
 
@@ -35,6 +35,7 @@ pip install --upgrade "pdfdeal[rag]"
 | `outputpath` | `str` | `""` | 保存图片的输出路径。如果未设置，将创建一个与 Markdown 文件同名并添加 `_img` 的文件夹。**仅在 `replace` 为 `"local"` 时有效** |
 | `relative` | `bool` | `False` | 使用相对路径保存图片。**仅在 `replace` 为 `"local"` 时有效** |
 | `threads` | `int` | `5` | 下载图片的线程数 |
+| `path_style`<Badge text="需要0.4.10+版本" type="warning" /> | `bool` | `False` | 上传到OSS时是否使用路径样式。如果为True，路径将为`/{filename}/{md5}.{extension}`。|
 
 ### 返回值
 
@@ -62,7 +63,7 @@ md_replace_imgs(
 )
 ```
 
-## `mds_replace_imgs`
+## `mds_replace_imgs`<Badge text="需要0.2.4+版本" type="warning" />
 
 替换指定路径中所有 Markdown 文件中的图片链接（CDN 链接 -> 本地文件/阿里OSS/自定义）。
 
@@ -77,6 +78,7 @@ md_replace_imgs(
 | `skip` | `str` | `None` | 以该字符串开头的 URL 将被跳过。例如，`"https://menghuan1918.github.io/pdfdeal-docs"` |
 | `threads` | `int` | `2` | 同时处理的MD文档数量 |
 | `down_load_threads` | `int` | `3` | 在一个 Markdown 文件中下载图片的线程数 |
+| `path_style`<Badge text="需要0.4.10+版本" type="warning" /> | `bool` | `False` | 上传到OSS时是否使用路径样式。如果为True，路径将为`/{filename}/{md5}.{extension}`。|
 
 ### 返回值
 

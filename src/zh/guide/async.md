@@ -32,7 +32,7 @@ flowchart LR
 
 - `apikey` (`str`): 用于认证的 API 密钥。
 - `pdffile` (`str`): 待上传的 PDF 文件路径。
-- `oss_choose` (`str`): 通过API直接上传文件或通过API提供的OSS链接上传文件。可接受的值：`auto`、`always`、`never`（即`仅>=100MB的文件将上传到OSS`，`所有文件都将上传到OSS`，`所有文件都将直接上传`）。==仅在`0.4.8b1`或更高版本可用==
+- `oss_choose` (`str`)<Badge text="需要0.4.8b1+版本" type="warning" />: 通过API直接上传文件或通过API提供的OSS链接上传文件。可接受的值：`auto`、`always`、`never`（即`仅>=100MB的文件将上传到OSS`，`所有文件都将上传到OSS`，`所有文件都将直接上传`）。
 
 #### 异常
 
