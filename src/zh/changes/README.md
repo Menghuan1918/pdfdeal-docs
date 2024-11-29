@@ -2,6 +2,10 @@
 title: 更新日志
 icon: wrench
 ---
+## V1.0.0
+### 🚀 其他
+- 将默认处理超时时长延长至5分钟，以在默认状态下即可处理超大文件
+
 ## V0.4.10
 ### ✨ 新功能
 - 新增内置上传工具：[PicGo](https://github.com/Molunerfinn/PicGo)。现在支持将 Markdown 文档中的本地或在线图片，通过PicGo上传到图床。[🔍查看使用示例](../guide/Tools/Upload.md#picgo)
