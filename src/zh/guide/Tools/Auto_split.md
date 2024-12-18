@@ -24,7 +24,7 @@ pip install --upgrade "pdfdeal[tools]"
 | 参数          | 类型  | 默认值                | 描述                                                                      |
 | ------------- | ----- | --------------------- | ------------------------------------------------------------------------- |
 | `mdfile`      | `str` | 必填                  | Markdown 文件路径                                                         |
-| `mode`        | `str` | `"title"`             | 分割方式。**目前仅支持 `title`（按标题分割）**                            |
+| `mode`<Badge text="需要1.0.1+版本" type="warning" />        | `str` | `"auto"`             | 分割方式。支持 `auto`（依次尝试H3、H2、H1）、`H1`（按一级标题分割）、`H2`（按二级标题分割）、`H3`（按三级标题分割） |
 | `out_type`    | `str` | `"single"`            | 输出方式。目前支持 `single`（输出为一个文件）和 `replace`（替换原文件）以及`multi`（按段输出多个文件） |
 | `split_str`   | `str` | `"=+=+=+=+=+=+=+=+="` | 用于分割 Markdown 文件的字符串                                            |
 | `output_path` | `str` | `"./Output"`          | 输出文件路径。当 `out_type` 为 `replace` 时无效                           |
@@ -50,7 +50,7 @@ pip install --upgrade "pdfdeal[tools]"
 | 参数          | 类型   | 默认值                | 描述                                                                      |
 | ------------- | ------ | --------------------- | ------------------------------------------------------------------------- |
 | `mdpath`      | `str`  | 必填                  | 包含 Markdown 文件的文件夹路径                                            |
-| `mode`        | `str`  | `"title"`             | 分割方式。**目前仅支持 `title`（按标题分割）**                            |
+| `mode`<Badge text="需要1.0.1+版本" type="warning" />        | `str` | `"auto"`             | 分割方式。支持 `auto`（依次尝试H3、H2、H1）、`H1`（按一级标题分割）、`H2`（按二级标题分割）、`H3`（按三级标题分割） |
 | `out_type`    | `str`  | `"single"`            | 输出方式。目前支持 `single`（输出为一个文件）和 `replace`（替换原文件）以及`multi`（按段输出多个文件） |
 | `split_str`   | `str`  | `"=+=+=+=+=+=+=+=+="` | 用于分割 Markdown 文件的字符串                                            |
 | `output_path` | `str`  | `"./Output"`          | 输出分割文件的路径。当 `out_type` 为 `replace` 时无效                     |

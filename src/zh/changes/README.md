@@ -2,6 +2,13 @@
 title: 更新日志
 icon: wrench
 ---
+## V1.0.1
+### ✨ 新功能
+
+- 上传图片到图床现在支持自动使用uuid重命名文件名 [🔍查看使用示例](../guide/Tools/MD_imgs.md) [#60](https://github.com/Menghuan1918/pdfdeal/issues/60) by [@Chen571428](https://github.com/Chen571428)
+
+- MD分割工具支持更多分割选项：`auto`（依次尝试H3、H2、H1）、`H1`（按一级标题分割）、`H2`（按二级标题分割）、`H3`（按三级标题分割） [🔍查看使用示例](../guide/Tools/Auto_split.md)
+
 ## V1.0.0
 ### 🚀 其他
 - 将默认处理超时时长延长至5分钟，以在默认状态下即可处理超大文件

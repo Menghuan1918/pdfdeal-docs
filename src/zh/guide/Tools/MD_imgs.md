@@ -36,6 +36,7 @@ pip install --upgrade "pdfdeal[rag]"
 | `relative` | `bool` | `False` | 使用相对路径保存图片。**仅在 `replace` 为 `"local"` 时有效** |
 | `threads` | `int` | `5` | 下载图片的线程数 |
 | `path_style`<Badge text="需要0.4.10+版本" type="warning" /> | `bool` | `False` | 上传到OSS时是否使用路径样式。如果为True，路径将为`/{filename}/{md5}.{extension}`。|
+| `uuid_rename`<Badge text="需要1.0.1+版本" type="warning" /> | `bool` | `False` | 是否使用UUID重命名文件。|
 
 ### 返回值
 
@@ -79,6 +80,7 @@ md_replace_imgs(
 | `threads` | `int` | `2` | 同时处理的MD文档数量 |
 | `down_load_threads` | `int` | `3` | 在一个 Markdown 文件中下载图片的线程数 |
 | `path_style`<Badge text="需要0.4.10+版本" type="warning" /> | `bool` | `False` | 上传到OSS时是否使用路径样式。如果为True，路径将为`/{filename}/{md5}.{extension}`。|
+| `uuid_rename`<Badge text="需要1.0.1+版本" type="warning" /> | `bool` | `False` | 是否使用UUID重命名文件。|
 
 ### 返回值
 

@@ -2,6 +2,17 @@
 title: Update Log
 icon: wrench
 ---
+## V1.0.1
+### ✨ New Features
+
+- Uploading images to image hosting now supports automatic renaming of filenames using UUID [🔍View usage example](../guide/Tools/MD_imgs.md) [#60](https://github.com/Menghuan1918/pdfdeal/issues/60) by [@Chen571428](https://github.com/Chen571428)
+
+- The MD splitting tool now supports more splitting options: `auto` (tries H3, H2, H1 in order), `H1` (split by first-level heading), `H2` (split by second-level heading), `H3` (split by third-level heading) [🔍View usage example](../guide/Tools/Auto_split.md)
+
+## V1.0.0
+### 🚀 Other
+- Extended the default processing timeout to 5 minutes to handle large files in default settings
+
 ## V0.4.10
 ### ✨ New Features
 - Added a built-in upload tool: [PicGo](https://github.com/Molunerfinn/PicGo). Now supports uploading local or online images in Markdown documents to image hosting via PicGo. [🔍View usage example](../guide/Tools/Upload.md#picgo)
